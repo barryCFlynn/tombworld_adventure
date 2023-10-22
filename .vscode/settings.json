@@ -28,5 +28,8 @@
       "Necrons",
       "Tombworld",
       "Warhammer"
-   ]
+   ],
+   "[python]": {
+      "editor.defaultFormatter": "ms-python.python"
+   }
 }
