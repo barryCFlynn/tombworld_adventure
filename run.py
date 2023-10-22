@@ -1,21 +1,16 @@
+"""
+imports
+"""
 import time
 
+"""
+Global variables
+"""
 PLAYER_NAME = "Player"
 WEAPON = False
 WEAPON_TYPE = ""
 
-def slow_print_01(print_statement):
-      for char in print_statement:
-        print(char, end='', flush=True)
-        time.sleep(0.1)
 
-def slow_print_03(print_statement):
-      for char in print_statement:
-        print(char, end='', flush=True)
-        time.sleep(0.3)
-
-
-import time
 
 def slower_print(print_statement):
       """
@@ -30,13 +25,30 @@ def slow_print(print_statement):
       Function to print a string one character at a time at speed 0.01
       """
       for char in print_statement:
-            print(char, end='', flush=True)
-            time.sleep(0.01)
+           print(char, end='', flush=True)
+           time.sleep(0.01)
+
 
 def main():
       """
       This is the main function that will run the program
       """
+      print(r""" 
+████████╗ ██████╗ ███╗   ███╗██████╗ ██╗    ██╗ ██████╗ ██████╗ ██╗     ██████╗     
+╚══██╔══╝██╔═══██╗████╗ ████║██╔══██╗██║    ██║██╔═══██╗██╔══██╗██║     ██╔══██╗    
+   ██║   ██║   ██║██╔████╔██║██████╔╝██║ █╗ ██║██║   ██║██████╔╝██║     ██║  ██║    
+   ██║   ██║   ██║██║╚██╔╝██║██╔══██╗██║███╗██║██║   ██║██╔══██╗██║     ██║  ██║    
+   ██║   ╚██████╔╝██║ ╚═╝ ██║██████╔╝╚███╔███╔╝╚██████╔╝██║  ██║███████╗██████╔╝    
+   ╚═╝    ╚═════╝ ╚═╝     ╚═╝╚═════╝  ╚══╝╚══╝  ╚═════╝ ╚═╝  ╚═╝╚══════╝╚═════╝     
+                                                                                    
+ █████╗ ██████╗ ██╗   ██╗███████╗███╗   ██╗████████╗██╗   ██╗██████╗ ███████╗       
+██╔══██╗██╔══██╗██║   ██║██╔════╝████╗  ██║╚══██╔══╝██║   ██║██╔══██╗██╔════╝       
+███████║██║  ██║██║   ██║█████╗  ██╔██╗ ██║   ██║   ██║   ██║██████╔╝█████╗         
+██╔══██║██║  ██║╚██╗ ██╔╝██╔══╝  ██║╚██╗██║   ██║   ██║   ██║██╔══██╗██╔══╝         
+██║  ██║██████╔╝ ╚████╔╝ ███████╗██║ ╚████║   ██║   ╚██████╔╝██║  ██║███████╗       
+╚═╝  ╚═╝╚═════╝   ╚═══╝  ╚══════╝╚═╝  ╚═══╝   ╚═╝    ╚═════╝ ╚═╝  ╚═╝╚══════╝       
+                                                                                                                                                                                                                                                                                       
+      """)
       slow_print(
       r"""Welcome to Tombworld Adventure, a gripping text-based 
       journey set in the grim and mysterious universe of Warhammer 
@@ -48,5 +60,6 @@ def main():
       of the Necrons and find your path back to the world you once knew?
       """
       )
+
 
 main()
