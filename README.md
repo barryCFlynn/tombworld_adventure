@@ -45,7 +45,8 @@ i wanted to add some character to the print statements and found a way to add de
 template:
     
     message = """ """
-    for char in message:
+    for char in message
+    
         print(char, end='', flush=True)
         time.sleep(0.1)
 
@@ -58,6 +59,9 @@ Weapons
 
 i want to add atleast 2 weapons a mining laser and something else. for use on certain monsters and may add a random roll to add RNG, maybe have the requirements to have a weapon to get past a certain monster 
 
+credits
+
+https://textkool.com/ for ASCII art generator - used for game title
 
 
 # TomBworld Adventure
