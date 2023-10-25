@@ -1,11 +1,11 @@
-"""
-imports
-"""
+
+# imports
+
 import time
 
-"""
-Global variables
-"""
+
+# Global variables
+
 PLAYER_NAME = ""
 WEAPON = False
 WEAPON_TYPE = ""
@@ -13,27 +13,27 @@ WEAPON_TYPE = ""
 
 
 def slower_print(print_statement):
-      """
-      Function to print a string one character at a time at speed 0.1
-      """
-      for char in print_statement:
-            print(char, end='', flush=True)
-            time.sleep(0.1)
+    """
+    Function to print a string one character at a time at speed 0.1
+    """
+    for char in print_statement:
+        print(char, end='', flush=True)
+        time.sleep(0.1)
 
 def slow_print(print_statement):
-      """
-      Function to print a string one character at a time at speed 0.01
-      """
-      for char in print_statement:
-           print(char, end='', flush=True)
-           time.sleep(0.01)
+    """
+    Function to print a string one character at a time at speed 0.01
+    """
+    for char in print_statement:
+        print(char, end='', flush=True)
+        time.sleep(0.01)
 
 
 def main():
-      """
-      This is the main function that will run the program
-      """
-      print(r""" 
+    """
+    This is the main function that will run the program
+    """
+    print(r""" 
 ████████╗ ██████╗ ███╗   ███╗██████╗ ██╗    ██╗ ██████╗ ██████╗ ██╗     ██████╗     
 ╚══██╔══╝██╔═══██╗████╗ ████║██╔══██╗██║    ██║██╔═══██╗██╔══██╗██║     ██╔══██╗    
    ██║   ██║   ██║██╔████╔██║██████╔╝██║ █╗ ██║██║   ██║██████╔╝██║     ██║  ██║    
@@ -48,8 +48,8 @@ def main():
 ██║  ██║██████╔╝ ╚████╔╝ ███████╗██║ ╚████║   ██║   ╚██████╔╝██║  ██║███████╗       
 ╚═╝  ╚═╝╚═════╝   ╚═══╝  ╚══════╝╚═╝  ╚═══╝   ╚═╝    ╚═════╝ ╚═╝  ╚═╝╚══════╝       
                                                                                                                                                                                                                                                                                        
-      """)
-      print(
+""")
+    print(
 r"""Welcome to Tombworld Adventure, a gripping text-based 
 journey set in the grim and mysterious universe of Warhammer 
 40,000. You were a miner toiling on a barren planet, but a 
@@ -59,32 +59,31 @@ confront unspeakable terrors as you strive for survival and
 your escape. Are you prepared to face the malevolent forces 
 of the Necrons and find your path back to the world you once knew?
 """
-      )
-      global PLAYER_NAME
-      while True:
-            PLAYER_NAME = input("What is your name? ")
-            if PLAYER_NAME.isalpha():
-                  print(f"Welcome, {PLAYER_NAME}.")
-                  
-                  while True:
-                        game_input = input("Are you ready to escape? (y/n) ")
-                        if game_input == "y":
-                              room_intro()
-                              break
-                        elif game_input == "n":
-                              print("Until next time.")
-                              break
-                        else:
-                              print("Please enter a valid command.")
-            else:
-                  print("Please enter a valid name with only alphabetical characters.")
+    )
+    global PLAYER_NAME
+    while True:
+        PLAYER_NAME = input("What is your name? ")
+        if PLAYER_NAME.isalpha():
+            print(f"Welcome, {PLAYER_NAME}.")
+            while True:
+                game_input = input("Are you ready to escape? (y/n) ")
+                if game_input == "y":
+                    room_intro()
+                    break
+                elif game_input == "n":
+                    print("Until next time.")
+                    break
+                else:
+                    print("Please enter a valid command.")
+        else:
+            print("Please enter a valid name with only alphabetical characters.")
 
 
 def room_intro():
-      """
-      Room 1 function and options
-      """
-      print(
+    """
+    Room 1 function and options
+    """
+    print(
 r"""
 You awaken in a dimly lit chamber, the cold and metallic floor
 beneath you. The air is thick with an otherworldly chill. You 
@@ -93,7 +92,7 @@ catacombs. As your eyes adjust, you see eerie hieroglyphs etched into
 the walls, and the unmistakable mark of the Necrons is all around.
 """
             )
-      print(
+    print(
 r"""
 Options:
 1. Look around
@@ -101,60 +100,60 @@ Options:
 3. Move forward
 """
             )
-      routes = ["1", "2", "3"]
-      user_input = ""
+    routes = ["1", "2", "3"]
+    user_input = ""
 
-      while user_input not in routes:
-            user_input = input("What do you do? ")
-            if user_input == "1":
-                  hieroglyphs_1()
-            elif user_input == "2":
-                  print("place holder for function to come 'Check belongings'")
-            elif user_input == "3":
-                  room_1()
-            else:
-                  print("I don't understand that command, try another one.")
+    while user_input not in routes:
+        user_input = input("What do you do? ")
+        if user_input == "1":
+                hieroglyphs_1()
+        elif user_input == "2":
+                print("place holder for function to come 'Check belongings'")
+        elif user_input == "3":
+                room_1()
+        else:
+                print("I don't understand that command, try another one.")
 
 
 def room_1():
-      """
-      Room 1 function and options
-      """
-      print(
-            r"""
+    """
+    Room 1 function and options
+    """
+    print(
+        r"""
 As you step into the room ahead, the air grows colder, and the dim light 
 reveals intricate carvings on the walls, you hear the eerie echoes of 
 metallic footsteps approaching from the door to your left, a foreboding 
 presence drawing nearer.
 """
-      )
-      print(
+    )
+    print(
 r"""
 Options:
 1. Look around
 2. Move left
 3. Move forward
 """
-            )
-      routes = ["1", "2", "3"]
-      user_input = ""
+        )
+    routes = ["1", "2", "3"]
+    user_input = ""
 
-      while user_input not in routes:
-            user_input = input("What do you do? ")
-            if user_input == "1":
-                  print("You find nothing of interest.")
-            elif user_input == "2":
-                  death_scene()
-            elif user_input == "3":
-                  print("place holder for function to come 'Move forward'")
-            else:
-                  print("I don't understand that command, try another one.")
+    while user_input not in routes:
+        user_input = input("What do you do? ")
+        if user_input == "1":
+                print("You find nothing of interest.")
+        elif user_input == "2":
+                death_scene()
+        elif user_input == "3":
+                print("place holder for function to come 'Move forward'")
+        else:
+                print("I don't understand that command, try another one.")
 
 def death_scene():
-      """
-      Death scene function
-      """
-      print(
+    """
+    Death scene function
+    """
+    print(
 r"""
 "As you continue down the dimly lit corridor, the walls start to close in, and 
 the air grows increasingly oppressive. Suddenly, a group of sinister Necron warriors 
@@ -164,31 +163,31 @@ emerges from the shadows. Their eyes gleam with malevolent intent, and with ligh
  you succumb to the darkness, becoming another lost soul in the tomb world.
 """
             )
-      global PLAYER_NAME
-      while True:
-            game_input = input(f"you have died {PLAYER_NAME}, would you like to play again? (y/n) ")
-            if game_input == "y":
-                  main()
-                  break
-            elif game_input == "n":
-                  print("Until next time.")
-                  break
-            else:
-                  print("Please enter a valid command.")
+    global PLAYER_NAME
+    while True:
+        game_input = input(f"you have died {PLAYER_NAME}, would you like to play again? (y/n) ")
+        if game_input == "y":
+                main()
+                break
+        elif game_input == "n":
+                print("Until next time.")
+                break
+        else:
+                print("Please enter a valid command.")
 
 
 
 def hieroglyphs_1():
-      """
-      Function for hieroglyphs
-      """
-      print(
+    """
+    Function for hieroglyphs
+    """
+    print(
 r""" 
 You approach the hieroglyphs, they glow with green light and are in a 
 language you dont understand but you hear a voice in your head.
 """
-            )
-      print(
+        )
+    print(
 r""" 
 In the distant past, long before the Imperium of Man rose to power, this 
 desolate planet was once a thriving world of advanced civilization. The 
@@ -211,7 +210,7 @@ Now, eons later, you find yourself in this forsaken place, surrounded by the
 echoes of an ancient conflict and the ominous presence of the Necrons, who have 
 waited patiently for the day they would rise once more.
 """
-            )
+        )
 
 
 main()
