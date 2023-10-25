@@ -167,15 +167,13 @@ emerges from the shadows. Their eyes gleam with malevolent intent, and with ligh
     while True:
         game_input = input(f"you have died {PLAYER_NAME}, would you like to play again? (y/n) ")
         if game_input == "y":
-                main()
-                break
+            main()
+            break
         elif game_input == "n":
-                print("Until next time.")
-                break
+            print("Until next time.")
+            break
         else:
-                print("Please enter a valid command.")
-
-
+            print("Please enter a valid command.")
 
 def hieroglyphs_1():
     """
@@ -210,7 +208,7 @@ Now, eons later, you find yourself in this forsaken place, surrounded by the
 echoes of an ancient conflict and the ominous presence of the Necrons, who have 
 waited patiently for the day they would rise once more.
 """
-        )
+    )
 
 
 main()
