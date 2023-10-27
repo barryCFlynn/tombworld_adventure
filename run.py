@@ -2,10 +2,10 @@
 # imports
 
 import time
+import os
 
 
 # Global variables
-
 PLAYER_NAME = ""
 WEAPON = False
 WEAPON_TYPE = ""
@@ -27,6 +27,14 @@ def slow_print(print_statement):
     for char in print_statement:
         print(char, end='', flush=True)
         time.sleep(0.01)
+
+def clear_screen():
+    """
+    Clear the terminal screen.
+    """
+    os.system("cls" if os.name == "nt" else "clear")
+
+
 
 
 def main():
@@ -91,7 +99,7 @@ can hear the faint hum of ancient machinery echoing through the vast
 catacombs. As your eyes adjust, you see eerie hieroglyphs etched into 
 the walls, and the unmistakable mark of the Necrons is all around.
 """
-            )
+        )
     print(
 r"""
 Options:
@@ -99,7 +107,7 @@ Options:
 2. Check your belongings
 3. Move forward
 """
-            )
+        )
     routes = ["1", "2", "3"]
     user_input = ""
 
@@ -141,7 +149,7 @@ Options:
     while user_input not in routes:
         user_input = input("What do you do? ")
         if user_input == "1":
-                print("You find nothing of interest.")
+                hieroglyphs_1()
         elif user_input == "2":
                 death_scene()
         elif user_input == "3":
@@ -163,7 +171,7 @@ emerges from the shadows. Their eyes gleam with malevolent intent, and with ligh
  you succumb to the darkness, becoming another lost soul in the tomb world.
 """
             )
-    global PLAYER_NAME
+    # global PLAYER_NAME
     while True:
         game_input = input(f"you have died {PLAYER_NAME}, would you like to play again? (y/n) ")
         if game_input == "y":
@@ -209,6 +217,9 @@ echoes of an ancient conflict and the ominous presence of the Necrons, who have
 waited patiently for the day they would rise once more.
 """
     )
+    input("Press enter to continue")
+    clear_screen()
+    room_1()
 
 
 main()
