@@ -77,13 +77,12 @@ of the Necrons and find your path back to the world you once knew?
         if PLAYER_NAME.isalpha():
             print(f"Welcome, {PLAYER_NAME}.")
             while True:
-                game_input = input("Are you ready to escape? (y/n) ") # Ask the player if they are ready to play
+                # Ask the player if they are ready to play
+                game_input = input("Are you ready to escape? (y/n) ")
                 if game_input == "y":
                     room_intro()
-                    break
                 elif game_input == "n":
                     print("Until next time.")
-                    break
                 else:
                     print("Please enter a valid command.")
         else:
@@ -107,8 +106,7 @@ the walls, and the unmistakable mark of the Necrons is all around.
 r"""
 Options:
 1. Look around
-2. Check your belongings
-3. Move forward
+2. Move forward
 """
         )
     routes = ["1", "2", "3"]
@@ -119,20 +117,16 @@ Options:
         if user_input == "1":
             hieroglyphs_1()
         elif user_input == "2":
-            print("place holder for function to come 'Check belongings'")
-        elif user_input == "3":
             room_1()
         else:
             print("I don't understand that command, try another one.")
-
-
 
 def room_1():
     """
     Room 1 function and options
     """
     print(
-        r"""
+r"""
 As you step into the room ahead, the air grows colder, and the dim light 
 reveals intricate carvings on the walls, you hear the eerie echoes of 
 metallic footsteps approaching from the door to your left, a foreboding 
@@ -167,7 +161,7 @@ def room_2():
     Room 2 function and options
     """
     print(
-        r"""
+r"""
 As you cautiously enter the room ahead, the chamber is bathed in an eerie, 
 dim light, casting an eldritch green glow that pervades the air with an 
 otherworldly energy. Amidst this mysterious ambiance, you're drawn to a curious 
@@ -202,7 +196,7 @@ def room_3():
     Room 3 weapon room function and options
     """
     print(
-        r"""
+r"""
 As you enter the room with the white light, it's veiled in an unsettling darkness. Your eyes 
 gradually adapt to the obscurity, and you're drawn to a flickering white light originating 
 from an unclear object concealed in the corner. In the dimly lit surroundings, your attention 
@@ -237,7 +231,7 @@ def room_4():
     Room 4 monster room function and options
     """
     print(
-        r"""
+r"""
 You step into the room and come face to face with a swarm of small insect-like creatures. 
 Something in your mind tells you they are Scarabs, the Necron tomb maintenance creatures. 
 You notice a promising open passageway to your right, but a barrier of Scarabs stands between you 
@@ -260,7 +254,7 @@ Options:
         if user_input == "1":
             room_3()
         elif user_input == "2":
-            fight()
+            fight_1()
         else:
             print("I don't understand that command, try another one.")
 
@@ -287,13 +281,11 @@ def death_scene():
     """
 
     while True:
-        game_input = input(f"you have died {PLAYER_NAME}, would you like to play again? (y/n) ")
+        game_input = input(f"Game Over {PLAYER_NAME}, would you like to play again? (y/n) ")
         if game_input == "y":
             main()
-            break
         elif game_input == "n":
             print("Until next time.")
-            break
         else:
             print("Please enter a valid command.")
 
@@ -314,7 +306,7 @@ utility racing through your mind.
     input("Press enter to continue") # Wait for the player to press Enter
     room_3()
 
-def fight():
+def fight_1():
     """
     Function for fighting
     """
@@ -342,22 +334,25 @@ diminishing your own.
 
             if random_hit >= 3:
                 scarab_health -= 1
-                print(f"""
-    You rolled a {random_hit} and hit the enemy!
-    They have {scarab_health} health left.
-                """
+                print(
+f"""
+You rolled a {random_hit} and hit the enemy!
+They have {scarab_health} health left.
+"""
                 )
             else:
                 player_health -= 1
-                print(f"""
-    Your attack missed with a {random_hit},
-    the scarabs attack you and you have {player_health} health left.
-                """
+                print(
+f"""
+Your attack missed with a {random_hit},
+the scarabs attack you and you have {player_health} health left.
+"""
                 )
         else:
-            print(r"""
-    You don't have the right weapon to fight and you retreat back to the room you came from.
-            """
+            print(
+r"""
+You don't have the right weapon to fight and you retreat back to the room you came from.
+"""
             )
             input("Press Enter to continue") # Wait for the player to press Enter
             room_3()
@@ -365,12 +360,30 @@ diminishing your own.
     else:
         if player_health <= 0:
             print("You have been defeated. Game over.")
+            input("Press Enter to continue") # Wait for the player to press Enter
             death_scene()
 
         elif scarab_health <= 0:
             print("You defeated the scarabs. You win!")
-            #exit_scene()
+            input("Press Enter to continue") # Wait for the player to press Enter
+            exit_scene()
 
+
+def exit_scene():
+    """
+    Exit scene function
+    """
+    print(
+r"""
+You sprint past the defeated foes obstructing your path, hurtling into the corridor where an intense,
+blinding light beckons from the far end. Without hesitation, you discard your weapons and dash 
+toward the radiance. As you approach, an invisible barrier halts your advance, revealing a 
+looming figure on the other side. It's a Necron Overlord, and an eerie awareness in your 
+mind whispers his name: Trazyn. In a cold, robotic voice projected into your consciousness,
+he utters, "Shall we try again?"
+"""
+    )
+    death_scene()
 
 def hieroglyphs_1():
     """
@@ -409,7 +422,5 @@ waited patiently for the day they would rise once more.
     input("Press enter to continue") # Wait for the player to press Enter
     room_1()
 
-
 room_3()
-#fight()
 #main()
