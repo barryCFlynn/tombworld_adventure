@@ -123,6 +123,7 @@ Options:
                 print("I don't understand that command, try another one.")
 
 
+
 def room_1():
     """
     Room 1 function and options
@@ -153,14 +154,52 @@ Options:
         elif user_input == "2":
                 death_scene()
         elif user_input == "3":
-                print("place holder for function to come 'Move forward'")
+                room_2()
         else:
                 print("I don't understand that command, try another one.")
+
+
+def room_2():
+    """
+    Room 2 function and options
+    """
+    print(
+        r"""
+As you cautiously enter the room ahead, the chamber is bathed in an eerie, 
+dim light, casting an eldritch green glow that pervades the air with an 
+otherworldly energy. Amidst this mysterious ambiance, you're drawn to a curious 
+sight—an ethereal white light emanating from the room to your right. Its source 
+and purpose remain enigmatic, yet it fills you with a glimmer of hope."
+"""
+    )
+    print(
+r"""
+Options:
+1. Move back
+2. Move right
+3. Move forward
+"""
+        )
+    routes = ["1", "2", "3"]
+    user_input = ""
+
+    while user_input not in routes:
+        user_input = input("What do you do? ")
+        if user_input == "1":
+            room_1()
+        elif user_input == "2":
+            room_3()
+        elif user_input == "3":
+            room_5()
+        else:
+            print("I don't understand that command, try another one.")
+
 
 def death_scene():
     """
     Death scene function
     """
+
     print(
 r"""
 "As you continue down the dimly lit corridor, the walls start to close in, and 
@@ -171,7 +210,6 @@ emerges from the shadows. Their eyes gleam with malevolent intent, and with ligh
  you succumb to the darkness, becoming another lost soul in the tomb world.
 """
             )
-    # global PLAYER_NAME
     while True:
         game_input = input(f"you have died {PLAYER_NAME}, would you like to play again? (y/n) ")
         if game_input == "y":
@@ -182,6 +220,7 @@ emerges from the shadows. Their eyes gleam with malevolent intent, and with ligh
             break
         else:
             print("Please enter a valid command.")
+
 
 def hieroglyphs_1():
     """
@@ -218,7 +257,7 @@ waited patiently for the day they would rise once more.
 """
     )
     input("Press enter to continue")
-    clear_screen()
+
     room_1()
 
 
