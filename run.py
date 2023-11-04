@@ -45,6 +45,7 @@ def main():
     """
     This is the main function that will run the program
     """
+    clear_screen()
     print(r""" 
 ████████╗ ██████╗ ███╗   ███╗██████╗ ██╗    ██╗ ██████╗ ██████╗ ██╗     ██████╗     
 ╚══██╔══╝██╔═══██╗████╗ ████║██╔══██╗██║    ██║██╔═══██╗██╔══██╗██║     ██╔══██╗    
@@ -84,6 +85,7 @@ of the Necrons and find your path back to the world you once knew?
                     room_intro()
                 elif game_input == "n":
                     print("Until next time.")
+                    sys.exit()
                 else:
                     print("Please enter a valid command.")
         else:
@@ -94,6 +96,7 @@ def room_intro():
     """
     Room 1 function and options
     """
+    clear_screen()
     print(
 r"""
 You awaken in a dimly lit chamber, the cold and metallic floor
@@ -110,7 +113,7 @@ Options:
 2. Move forward
 """
         )
-    routes = ["1", "2", "3"]
+    routes = ["1", "2"]
     user_input = ""
 
     while user_input not in routes:
@@ -126,32 +129,30 @@ def room_1():
     """
     Room 1 function and options
     """
+    clear_screen()
     print(
 r"""
 As you step into the room ahead, the air grows colder, and the dim light 
 reveals intricate carvings on the walls, you hear the eerie echoes of 
-metallic footsteps approaching from the door to your left, a foreboding 
-presence drawing nearer.
+metallic footsteps approaching from the door to your right, a foreboding 
+presence drawing nearer but you see another passageway forward.
 """
     )
     print(
 r"""
 Options:
-1. Look around
-2. Move left
-3. Move forward
+1. Move Right
+2. Move Forward
 """
         )
-    routes = ["1", "2", "3"]
+    routes = ["1", "2"]
     user_input = ""
 
     while user_input not in routes:
         user_input = input("What do you do? ") # Ask the player what they want to do
         if user_input == "1":
-            hieroglyphs_1()
-        elif user_input == "2":
             death_room_1()
-        elif user_input == "3":
+        elif user_input == "2":
             room_2()
         else:
             print("I don't understand that command, try another one.")
@@ -161,12 +162,13 @@ def room_2():
     """
     Room 2 function and options
     """
+    clear_screen()
     print(
 r"""
 As you cautiously enter the room ahead, the chamber is bathed in an eerie, 
 dim light, casting an eldritch green glow that pervades the air with an 
 otherworldly energy. Amidst this mysterious ambiance, you're drawn to a curious 
-sight. An ethereal white light emanating from the room to your right. Its source 
+sight. An ethereal white light emanating from the room to your left. Its source 
 and purpose remain enigmatic, yet it fills you with a glimmer of hope."
 """
     )
@@ -174,7 +176,7 @@ and purpose remain enigmatic, yet it fills you with a glimmer of hope."
 r"""
 Options:
 1. Move back
-2. Move right
+2. Move left
 3. Move forward
 """
         )
@@ -196,6 +198,7 @@ def room_3():
     """
     Room 3 weapon room function and options
     """
+    clear_screen()
     print(
 r"""
 As you enter the room with the white light, it's veiled in an unsettling darkness. Your eyes 
@@ -231,6 +234,7 @@ def room_4():
     """
     Room 4 monster room function and options
     """
+    clear_screen()
     print(
 r"""
 You step into the room and come face to face with a swarm of small insect-like creatures. 
@@ -263,6 +267,7 @@ def room_5():
     """
     Room 5 function and options
     """
+    clear_screen()
     print(
 r"""
 As you cautiously advance into the chamber, the surroundings reveal an eerie scene.
@@ -304,6 +309,7 @@ def room_6():
     """
     Room 6 function and options
     """
+    clear_screen()
     print(
 r"""
 Upon entering the room, your surroundings unfold before you. To the far side, a peculiar object
@@ -341,6 +347,7 @@ def room_7():
     """
     Room 7 monster room function and options
     """
+    clear_screen()
     print(
 r"""
 In the dim, eerie light, you step into a chilling room. A harrowing sight unfolds before you as 
@@ -378,6 +385,7 @@ def room_7_continue():
     """
     Room 7 continued function and options
     """
+    clear_screen()
     print(
 r"""
 You have defeated the Necron warrior, but not without injury. You stand in the same room, your
@@ -414,14 +422,15 @@ def death_room_1():
     """
     Death 1 room function
     """
+    clear_screen()
     print(
 r"""
 As you continue down the dimly lit corridor, the walls start to close in, and 
-the air grows increasingly oppressive. Suddenly, a group of sinister Necron warriors 
-emerges from the shadows. Their eyes gleam with malevolent intent, and with lightning
-speed, they surround you. You fight valiantly, but their cold, unfeeling metal bodies 
-prove too much. Your vision fades as their unrelenting onslaught overwhelms you, and 
-you succumb to the darkness, becoming another lost soul in the tomb world.
+the air grows increasingly oppressive. Suddenly, a group of sinister Necron Immortals 
+emerges from the shadows. Their eyes gleam with malevolent intent, they snap out of
+existence and instantly reappear around you. You fight valiantly, but their cold, 
+unfeeling metal bodies prove too much. Your vision fades as their unrelenting onslaught
+overwhelms you, and you succumb to the darkness, becoming another lost soul in the tomb world.
 """
     )
     death_scene()
@@ -430,6 +439,7 @@ def death_room_2():
     """
     Death 2 room function
     """
+    clear_screen()
     print(
 r"""
 Intrigued by the path forward, you venture deeper into the room, only to witness an unsettling 
@@ -461,6 +471,7 @@ def weapon_1():
     """
     Function for Mining Laser
     """
+    clear_screen()
     print(
 r"""
 You move towards the flashing light and discover a cargo palette from your mining facility. 
@@ -478,6 +489,7 @@ def weapon_2():
     """
     Function for Shovel
     """
+    clear_screen()
     print(
 r"""
 As you cautiously venture deeper into the room approaching the object. In the dim light,
@@ -502,6 +514,7 @@ def fight_1():
     """
     Function for fighting
     """
+    clear_screen()
     print(
 r"""
 You make the bold decision to confront the swarm of Scarabs. Your starting health stands 
@@ -563,6 +576,7 @@ def fight_2():
     """
     Function for fighting 2
     """
+    clear_screen()
     print(
 r"""
 You make the bold decision to confront the damaged Necron warrior. Your starting health stands 
@@ -623,6 +637,7 @@ def exit_scene():
     """
     Exit scene function
     """
+    clear_screen()
     print(
 r"""
 You sprint past the defeated foes obstructing your path, hurtling into the corridor where an 
@@ -637,8 +652,9 @@ utters, 'Shall we try again?'
 
 def hieroglyphs_1():
     """
-    Function for hieroglyphs
+    Function for hieroglyphs option 1
     """
+    clear_screen()
     print(
 r""" 
 You approach the hieroglyphs, they glow with green light and are in a 
@@ -666,11 +682,15 @@ As you decipher the hieroglyphs, you catch glimpses of this dark history, filled
 promises of power, immortality, and a looming sense of malevolence.
 """
     )
-    input("Press enter to continue and move into the room ahead") # Wait for the player to press Enter
-    room_2()
+    # Wait for the player to press Enter
+    input("Press enter to continue and move into the room ahead")
+    room_1()
 
 def hieroglyphs_2():
-
+    """
+    Function for hieroglyphs option 2
+    """
+    clear_screen()
     print(
 r""" 
 You approach the hieroglyphs, they glow with green light and are in a 
