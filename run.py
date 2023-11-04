@@ -1,18 +1,14 @@
-"""
-imports for the game
-"""
+
+# imports for the game
+
 import time
 import os
 import random
 import sys
 
-
-"""
-Global variables for the game
-"""
+# Global variables for the game
 PLAYER_NAME = ""
-# WEAPON = False not in use might be deleted
-WEAPON_TYPE = ""
+WEAPON_TYPE = []
 
 
 
@@ -481,7 +477,7 @@ utility racing through your mind.
 """
     )
     global WEAPON_TYPE
-    WEAPON_TYPE = "Mining Laser"
+    WEAPON_TYPE.append("Mining Laser")
     input("Press enter to continue") # Wait for the player to press Enter
     room_3()
 
@@ -506,7 +502,7 @@ reminder of the perils that surround you.
 """
     )
     global WEAPON_TYPE
-    WEAPON_TYPE = "Shovel"
+    WEAPON_TYPE.append("Shovel")
     input("Press enter to continue") # Wait for the player to press Enter
     room_6()
 
