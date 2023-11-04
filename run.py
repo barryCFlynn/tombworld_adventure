@@ -4,6 +4,7 @@ imports for the game
 import time
 import os
 import random
+import sys
 
 
 """
@@ -149,7 +150,7 @@ Options:
         if user_input == "1":
             hieroglyphs_1()
         elif user_input == "2":
-            death_scene()
+            death_room_1()
         elif user_input == "3":
             room_2()
         else:
@@ -165,7 +166,7 @@ r"""
 As you cautiously enter the room ahead, the chamber is bathed in an eerie, 
 dim light, casting an eldritch green glow that pervades the air with an 
 otherworldly energy. Amidst this mysterious ambiance, you're drawn to a curious 
-sight—an ethereal white light emanating from the room to your right. Its source 
+sight. An ethereal white light emanating from the room to your right. Its source 
 and purpose remain enigmatic, yet it fills you with a glimmer of hope."
 """
     )
@@ -246,7 +247,7 @@ Options:
 2. Stand and fight
 """
         )
-    routes = ["1", "2", "3"]
+    routes = ["1", "2"]
     user_input = ""
 
     while user_input not in routes:
@@ -258,34 +259,201 @@ Options:
         else:
             print("I don't understand that command, try another one.")
 
+def room_5():
+    """
+    Room 5 function and options
+    """
+    print(
+r"""
+As you cautiously advance into the chamber, the surroundings reveal an eerie scene.
+Directly ahead, a passage looms in the dim light, but a foreboding presence lingers there,
+a palpable sense of danger.
+
+To your right, an alternative route beckons, seeming the wiser choice. The walls are
+adorned with ancient hieroglyphs, their symbols etched into the stone, hinting at cryptic
+knowledge. It's a room filled with a sense of unease, and your path must be
+chosen carefully.
+"""
+    )
+    print(
+r"""
+Options:
+1. Look Around
+2. Move back
+3. Move right
+4. Move forward
+"""
+        )
+    routes = ["1", "2", "3", "4"]
+    user_input = ""
+
+    while user_input not in routes:
+        user_input = input("What do you do? ") # Ask the player what they want to do
+        if user_input == "1":
+            hieroglyphs_2()
+        elif user_input == "2":
+            room_2()
+        elif user_input == "3":
+            room_6()
+        elif user_input == "4":
+            death_room_2()
+        else:
+            print("I don't understand that command, try another one.")
+
+def room_6():
+    """
+    Room 6 function and options
+    """
+    print(
+r"""
+Upon entering the room, your surroundings unfold before you. To the far side, a peculiar object
+protrudes from the ground, its nature hidden in the shadows. It beckons with an air of mystery,
+enticing your curiosity.
+
+On the right, a passage extends, promising a path forward, yet it something tells you that 
+there is danger that way. This chamber is a crossroads of choices, each fraught with 
+uncertainty and potential peril, and your next move will determine your fate in this necron tomb.
+"""
+    )
+    print(
+r"""
+Options:
+1. Look Around
+2. Move back
+3. Move right
+"""
+        )
+    routes = ["1", "2", "3"]
+    user_input = ""
+
+    while user_input not in routes:
+        user_input = input("What do you do? ") # Ask the player what they want to do
+        if user_input == "1":
+            weapon_2()
+        elif user_input == "2":
+            room_5()
+        elif user_input == "3":
+            room_7()
+        else:
+            print("I don't understand that command, try another one.")
+
+def room_7():
+    """
+    Room 7 monster room function and options
+    """
+    print(
+r"""
+In the dim, eerie light, you step into a chilling room. A harrowing sight unfolds before you as 
+the lifeless forms of your comrades lie strewn across the floor, victims of the relentless 
+Necron warriors. Silence hangs heavily in the air, broken only by your own breath.
+
+Amidst the carnage, a single Necron warrior stands, visibly damaged, its once-imposing form now
+showing signs of wear. It gazes at you with its cold, metallic eyes, a solitary sentinel in this
+chamber of death.
+
+A choice looms before you — do you attack the wounded Necron warrior, or do you go back the way 
+you came?
+"""
+    )
+    print(
+r"""
+Options:
+1. Run back
+2. Stand and fight
+"""
+        )
+    routes = ["1", "2"]
+    user_input = ""
+
+    while user_input not in routes:
+        user_input = input("What do you do? ") # Ask the player what they want to do
+        if user_input == "1":
+            room_6()
+        elif user_input == "2":
+            fight_2()
+        else:
+            print("I don't understand that command, try another one.")
+
+def room_7_continue():
+    """
+    Room 7 continued function and options
+    """
+    print(
+r"""
+You have defeated the Necron warrior, but not without injury. You stand in the same room, your
+own wounds a reminder of the battle.
+
+Two passages stretch before you. The one directly ahead reverberates with eerie echoes of 
+metallic footsteps drawing near, a haunting presence approaching.
+
+The other passageway appears as your only viable option, beckoning you to venture deeper into 
+this labyrinthine tomb, the choices ahead shrouded in uncertainty and danger.
+"""
+    )
+    print(
+r"""
+Options:
+1. Move forward
+2. Move left
+"""
+        )
+    routes = ["1", "2"]
+    user_input = ""
+
+    while user_input not in routes:
+        user_input = input("What do you do? ") # Ask the player what they want to do
+        if user_input == "1":
+            death_room_1()
+        elif user_input == "2":
+            exit_scene()
+        else:
+            print("I don't understand that command, try another one.")
+
+
 def death_room_1():
     """
     Death 1 room function
     """
     print(
 r"""
-"As you continue down the dimly lit corridor, the walls start to close in, and 
+As you continue down the dimly lit corridor, the walls start to close in, and 
 the air grows increasingly oppressive. Suddenly, a group of sinister Necron warriors 
 emerges from the shadows. Their eyes gleam with malevolent intent, and with lightning
- speed, they surround you. You fight valiantly, but their cold, unfeeling metal bodies 
- prove too much. Your vision fades as their unrelenting onslaught overwhelms you, and 
- you succumb to the darkness, becoming another lost soul in the tomb world.
+speed, they surround you. You fight valiantly, but their cold, unfeeling metal bodies 
+prove too much. Your vision fades as their unrelenting onslaught overwhelms you, and 
+you succumb to the darkness, becoming another lost soul in the tomb world.
 """
     )
     death_scene()
 
+def death_room_2():
+    """
+    Death 2 room function
+    """
+    print(
+r"""
+Intrigued by the path forward, you venture deeper into the room, only to witness an unsettling 
+sight.A dark, shadowy figure moves through the far wall with an eerie, ethereal grace. It's a 
+Necron Wraith, a dreaded sentinel of the tomb world.
+
+Before you can react, its piercing crimson gaze locks onto you. In an instant, it darts forward, its
+form engulfing you. The world fades to black as the Necron Wraith's piercing touch claims your life,
+leaving you as one more lost soul in the necropolis of the tomb world.
+"""
+    )
+    death_scene()
 
 def death_scene():
     """
     Death scene function
     """
-
     while True:
         game_input = input(f"Game Over {PLAYER_NAME}, would you like to play again? (y/n) ")
         if game_input == "y":
             main()
         elif game_input == "n":
             print("Until next time.")
+            sys.exit()
         else:
             print("Please enter a valid command.")
 
@@ -306,6 +474,30 @@ utility racing through your mind.
     input("Press enter to continue") # Wait for the player to press Enter
     room_3()
 
+def weapon_2():
+    """
+    Function for Shovel
+    """
+    print(
+r"""
+As you cautiously venture deeper into the room approaching the object. In the dim light,
+your eyes fix on something unusual. As you draw nearer, you discern the eerie sight of a
+lifeless figure slumped over a shovel, still stuck in the stone. It's a chilling discovery.
+
+You recognize the man as one of your fellow miners, a member of your team. Questions flood
+your mind. What could have driven him to such despair that he resorted to using a shovel in
+a futile attempt to dig through the impenetrable stone face of this necron tomb?
+
+The mystery deepens, and the choices before you weigh heavily in this enigmatic world of
+shadows and secrets. You reach down and pick up the shovel, carrying it with you as a grim 
+reminder of the perils that surround you.
+"""
+    )
+    global WEAPON_TYPE
+    WEAPON_TYPE = "Shovel"
+    input("Press enter to continue") # Wait for the player to press Enter
+    room_6()
+
 def fight_1():
     """
     Function for fighting
@@ -321,7 +513,6 @@ diminishing your own.
 """
     )
     input("Press enter to continue") # Wait for the player to press Enter
-    #WEAPON_TYPE = "Mining Laser"
     scarab_health = 3
     player_health = 10
 
@@ -368,6 +559,65 @@ You don't have the right weapon to fight and you retreat back to the room you ca
             input("Press Enter to continue") # Wait for the player to press Enter
             exit_scene()
 
+def fight_2():
+    """
+    Function for fighting 2
+    """
+    print(
+r"""
+You make the bold decision to confront the damaged Necron warrior. Your starting health stands 
+at a mere 10, while the enemy health is at 4.
+You choose to fight, rushing the wounded Necron warrior with your shovel. In a swift, intense
+clash, sparks fly as metal meets metal. The battle rages on, a desperate struggle between flesh
+and steel.
+"""
+    )
+    input("Press enter to continue") # Wait for the player to press Enter
+    warrior_health = 4
+    player_health = 10
+
+    while warrior_health > 0 and player_health > 0:
+        if WEAPON_TYPE == "Shovel":
+            input("Press Enter to take a shot.")  # Wait for the player to press Enter
+
+            # Generate a random number between 1 and 6
+            random_hit = random.randint(1, 6)
+
+            if random_hit >= 4:
+                scarab_health -= 1
+                print(
+f"""
+You rolled a {random_hit} and hit the enemy!
+They have {warrior_health} health left.
+"""
+                )
+            else:
+                player_health -= 1
+                print(
+f"""
+Your attack missed with a {random_hit},
+the warrior attacks you and you have {player_health} health left.
+"""
+                )
+        else:
+            print(
+r"""
+You don't have the right weapon to fight and you retreat back to the room you came from.
+"""
+            )
+            input("Press Enter to continue") # Wait for the player to press Enter
+            room_6()
+            break
+    else:
+        if player_health <= 0:
+            print("You have been defeated. Game over.")
+            input("Press Enter to continue") # Wait for the player to press Enter
+            death_scene()
+
+        elif scarab_health <= 0:
+            print("You defeated the Warrior. You win!")
+            input("Press Enter to continue") # Wait for the player to press Enter
+            room_7_continue()
 
 def exit_scene():
     """
@@ -375,12 +625,12 @@ def exit_scene():
     """
     print(
 r"""
-You sprint past the defeated foes obstructing your path, hurtling into the corridor where an intense,
-blinding light beckons from the far end. Without hesitation, you discard your weapons and dash 
-toward the radiance. As you approach, an invisible barrier halts your advance, revealing a 
-looming figure on the other side. It's a Necron Overlord, and an eerie awareness in your 
-mind whispers his name: Trazyn. In a cold, robotic voice projected into your consciousness,
-he utters, "Shall we try again?"
+You sprint past the defeated foes obstructing your path, hurtling into the corridor where an 
+intense, blinding light beckons from the far end. Without hesitation, you discard your weapons
+and dash toward the radiance. As you approach, an invisible barrier halts your advance, revealing
+a looming figure on the other side. It's a Necron Overlord, and an eerie awareness in your mind
+whispers his name: Trazyn. In a cold, robotic voice projected into your consciousness, he 
+utters, 'Shall we try again?'
 """
     )
     death_scene()
@@ -397,30 +647,54 @@ language you dont understand but you hear a voice in your head.
         )
     print(
 r""" 
-In the distant past, long before the Imperium of Man rose to power, this 
-desolate planet was once a thriving world of advanced civilization. The 
-inhabitants, known as the 'Eldari' by some ancient texts, were masters of
-technology and arcane knowledge. They built grand cities and harnessed the 
-power of the stars. However, their relentless pursuit of power and forbidden 
-experiments led them to the brink of their own destruction.
+Long before the current age, the Necrons were an advanced and powerful civilization.
+Known as the 'Necrontyr,' their existence was marred by a relentless hunger for power
+and a thirst for immortality. In their pursuit of these ambitions, they entered into
+a Faustian pact with mysterious cosmic beings known as the C'tan.
 
-As their civilization teetered on the edge of annihilation, a dark force, 
-now known as the Necrons, emerged from the shadows. The Necrons, beings of 
-cold metal and remorseless determination, sought to reclaim the planet for 
-their own purposes.
+The Necrontyr were transformed into soulless, mechanical beings called the 'Necrons'
+in exchange for extended life. Their flesh turned to metal, and their consciousnesses
+were bound to intricate machine bodies. These soulless warriors served the C'tan
+with unwavering loyalty.
 
-A catastrophic war ensued, and the once-proud Eldari were driven to the brink
-of extinction. In a final desperate act, the Eldari used their dwindling power 
-to seal themselves within hidden tombs deep beneath the planet's surface. They 
-hoped that one day, they might awaken to rebuild their civilization.
+A devastating war between the Necrons and the ancient Eldari, once a thriving
+civilization, reshaped the galaxy. The Necrons retreated to dormant tombs scattered
+across the stars, awaiting the day they would reawaken and reclaim their dominion
+over the universe.
 
-Now, eons later, you find yourself in this forsaken place, surrounded by the 
-echoes of an ancient conflict and the ominous presence of the Necrons, who have 
-waited patiently for the day they would rise once more.
+As you decipher the hieroglyphs, you catch glimpses of this dark history, filled with
+promises of power, immortality, and a looming sense of malevolence.
 """
     )
-    input("Press enter to continue") # Wait for the player to press Enter
-    room_1()
+    input("Press enter to continue and move into the room ahead") # Wait for the player to press Enter
+    room_2()
 
-room_3()
-#main()
+def hieroglyphs_2():
+
+    print(
+r""" 
+You approach the hieroglyphs, they glow with green light and are in a 
+language you dont understand but you hear a voice in your head.
+"""
+    )
+    print(
+r"""
+The hieroglyphs unveil the enigmatic figure of 'Trazyn,' a formidable Necron Overlord
+renowned not only for his dominion over the legions of Necrons but also for his profound
+mastery of time and ancient relics. Trazyn is a collector without peer, amassing an
+unparalleled trove of artifacts and esoteric knowledge spanning the ages.
+
+His arcane vaults house treasures from epochs long past, relics from bygone civilizations,
+and the technology to manipulate time itself. Trazyn's control over temporal forces grants
+him the ability to traverse history, and his formidable intellect wields power over the
+past, present, and future.
+
+With his keen intellect, strategic brilliance, and access to these awe-inspiring
+artifacts, Trazyn is a force to be reckoned with in the dark and mysterious realm of
+the Necrons.
+"""
+    )
+    input("Press enter to continue from the room you are in") # Wait for the player to press Enter
+    room_5()
+
+main()
