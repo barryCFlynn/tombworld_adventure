@@ -69,7 +69,7 @@ def main():
         if PLAYER_NAME.isalpha():
             slower_print(f"Welcome, {PLAYER_NAME}.\n")
             while True:
-                game_input = input(" Are you ready to escape? (y/n) \n")
+                game_input = input("Are you ready to escape? (y/n) \n")
                 if game_input.lower() == "y":
                     room_intro()
                 elif game_input.lower() == "n":
@@ -89,10 +89,10 @@ def room_intro():
     clear_screen()
     slow_print(story_intro())  # Print story in game_stories.py
     slower_print(r"""
-    Options:
-    1. Look around
-    2. Move forward
-    """)
+Options:
+1. Look around
+2. Move forward
+""")
     routes = ["1", "2"]
     user_input = ""
 
@@ -337,11 +337,11 @@ def death_scene():
     Death scene function
     """
     while True:
-        game_input = input(f"Game Over {PLAYER_NAME}, "
+        game_input = input(f"\nGame Over {PLAYER_NAME}, "
                            "would you like to play again? (y/n)")
-        if game_input == "y":
+        if game_input.lower == "y":
             main()
-        elif game_input == "n":
+        elif game_input.lower == "n":
             print("Until next time.")
             sys.exit()
         else:
@@ -352,23 +352,34 @@ def weapon_1():
     """
     Function for Mining Laser
     """
-    clear_screen()
-    slow_print(story_weapon_1())  # Print story in game_stories.py
     global WEAPON_TYPE
-    WEAPON_TYPE.append("Mining Laser")
-    input("Press Enter to continue\n")  # Wait for the player to press Enter
+    clear_screen()
+
+    if "Mining Laser" in WEAPON_TYPE:
+        print("You have already investigated and picked up a Mining Laser.")
+    else:
+        slow_print(story_weapon_1())  # Print story in game_stories.py
+        WEAPON_TYPE.append("Mining Laser")
+
+    input("/nPress Enter to continue\n")  # Wait for the player to press Enter
     room_3()
+
 
 
 def weapon_2():
     """
     Function for Shovel
     """
-    clear_screen()
-    slow_print(story_weapon_2())  # Print the weapon 2 in game_stories.py
     global WEAPON_TYPE
-    WEAPON_TYPE.append("Shovel")
-    input("Press Enter to continue\n")  # Wait for the player to press Enter
+    clear_screen()
+
+    if "Shovel" in WEAPON_TYPE:
+        print("You have already investigated and picked up a Shovel.")
+    else:
+        slow_print(story_weapon_2())  # Print the weapon 2 in game_stories.py
+        WEAPON_TYPE.append("Shovel")
+
+    input("/nPress Enter to continue\n")  # Wait for the player to press Enter
     room_6()
 
 
@@ -480,8 +491,7 @@ def hieroglyphs_1():
     clear_screen()
     slow_print(story_hieroglyphs())  # Print story in game_stories.py
     fast_print(story_hieroglyphs_1())  # Print story in game_stories.py
-    # Wait for the player to press Enter
-    input("Press Enter to continue and move into the room ahead\n")
+    input("\nPress Enter to continue and move into the room ahead\n")
     room_1()
 
 
@@ -492,7 +502,7 @@ def hieroglyphs_2():
     clear_screen()
     slow_print(story_hieroglyphs())  # Print story in game_stories.py
     fast_print(story_hieroglyphs_2())  # Print story 2 in game_stories.py
-    input("Press Enter to continue from the room you are in\n")
+    input("\nPress Enter to continue from the room you are in\n")
     room_5()
 
 
