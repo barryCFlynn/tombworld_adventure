@@ -37,12 +37,12 @@ def main():
     slow_print(story_main()) # Print the main story from print_statements.py
     global PLAYER_NAME
     while True:
-        PLAYER_NAME = input("What is your name? ") # Ask the player for their name
+        PLAYER_NAME = input("What is your name? \n") # Ask the player for their name
         if PLAYER_NAME.isalpha():
             slower_print(f"Welcome, {PLAYER_NAME}.")
             while True:
                 # Ask the player if they are ready to play
-                game_input = input("Are you ready to escape? (y/n) ")
+                game_input = input("Are you ready to escape? (y/n) \n")
                 if game_input == "y":
                     room_intro()
                 elif game_input == "n":
@@ -71,7 +71,7 @@ Options:
     user_input = ""
 
     while user_input not in routes:
-        user_input = input("What do you do? ") # Ask the player what they want to do
+        user_input = input("What do you do? \n") # Ask the player what they want to do
         if user_input == "1":
             hieroglyphs_1()
         elif user_input == "2":
@@ -96,7 +96,7 @@ Options:
     user_input = ""
 
     while user_input not in routes:
-        user_input = input("What do you do? ") # Ask the player what they want to do
+        user_input = input("What do you do? \n") # Ask the player what they want to do
         if user_input == "1":
             death_room_1()
         elif user_input == "2":
@@ -123,7 +123,7 @@ Options:
     user_input = ""
 
     while user_input not in routes:
-        user_input = input("What do you do? ") # Ask the player what they want to do
+        user_input = input("What do you do? \n") # Ask the player what they want to do
         if user_input == "1":
             room_1()
         elif user_input == "2":
@@ -151,7 +151,7 @@ Options:
     user_input = ""
 
     while user_input not in routes:
-        user_input = input("What do you do? ") # Ask the player what they want to do
+        user_input = input("What do you do? \n") # Ask the player what they want to do
         if user_input == "1":
             weapon_1()
         elif user_input == "2":
@@ -178,7 +178,7 @@ Options:
     user_input = ""
 
     while user_input not in routes:
-        user_input = input("What do you do? ") # Ask the player what they want to do
+        user_input = input("What do you do? \n") # Ask the player what they want to do
         if user_input == "1":
             room_3()
         elif user_input == "2":
@@ -205,7 +205,7 @@ Options:
     user_input = ""
 
     while user_input not in routes:
-        user_input = input("What do you do? ") # Ask the player what they want to do
+        user_input = input("What do you do? \n") # Ask the player what they want to do
         if user_input == "1":
             hieroglyphs_2()
         elif user_input == "2":
@@ -235,7 +235,7 @@ Options:
     user_input = ""
 
     while user_input not in routes:
-        user_input = input("What do you do? ") # Ask the player what they want to do
+        user_input = input("What do you do? \n") # Ask the player what they want to do
         if user_input == "1":
             weapon_2()
         elif user_input == "2":
@@ -262,7 +262,7 @@ Options:
     user_input = ""
 
     while user_input not in routes:
-        user_input = input("What do you do? ") # Ask the player what they want to do
+        user_input = input("What do you do? \n") # Ask the player what they want to do
         if user_input == "1":
             room_6()
         elif user_input == "2":
@@ -287,7 +287,7 @@ Options:
     user_input = ""
 
     while user_input not in routes:
-        user_input = input("What do you do? ") # Ask the player what they want to do
+        user_input = input("What do you do? \n") # Ask the player what they want to do
         if user_input == "1":
             death_room_1()
         elif user_input == "2":
@@ -322,7 +322,7 @@ def weapon_1():
     slow_print(story_weapon_1()) # Print the weapon 1 from print_statements.py
     global WEAPON_TYPE
     WEAPON_TYPE.append("Mining Laser")
-    input("Press enter to continue") # Wait for the player to press Enter
+    input("Press enter to continue\n") # Wait for the player to press Enter
     room_3()
 
 def weapon_2():
@@ -333,7 +333,7 @@ def weapon_2():
     slow_print(story_weapon_2()) # Print the weapon 2 from print_statements.py
     global WEAPON_TYPE
     WEAPON_TYPE.append("Shovel")
-    input("Press enter to continue") # Wait for the player to press Enter
+    input("Press enter to continue\n") # Wait for the player to press Enter
     room_6()
 
 def fight_1():
@@ -342,13 +342,13 @@ def fight_1():
     """
     clear_screen()
     slow_print(story_fight_1()) # Print the fight 1 from print_statements.py
-    input("Press enter to continue") # Wait for the player to press Enter
+    input("Press enter to continue\n") # Wait for the player to press Enter
     scarab_health = 3
     player_health = 10
 
     while scarab_health > 0 and player_health > 0:
         if "Mining Laser" in WEAPON_TYPE:
-            input("Press Enter to take a shot.")  # Wait for the player to press Enter
+            input("Press Enter to take a shot.\n")  # Wait for the player to press Enter
 
             # Generate a random number between 1 and 6
             random_hit = random.randint(1, 6)
@@ -371,17 +371,17 @@ the scarabs attack you and you have {player_health} health left.
                 )
         else:
             print(wrong_weapon())
-            input("Press Enter to continue") # Wait for the player to press Enter
+            input("Press Enter to continue\n") # Wait for the player to press Enter
             room_3()
             break
     else:
         if player_health <= 0:
-            print("You have been defeated. Game over.")
+            print("You have been defeated. Game over.\n")
             input("Press Enter to continue") # Wait for the player to press Enter
             death_scene()
 
         elif scarab_health <= 0:
-            print("You defeated the scarabs. You win!")
+            print("You defeated the scarabs. You win!\n")
             input("Press Enter to continue") # Wait for the player to press Enter
             exit_scene()
 
@@ -391,13 +391,13 @@ def fight_2():
     """
     clear_screen()
     slow_print(story_fight_2()) # Print the fight 2 from print_statements.py
-    input("Press enter to continue") # Wait for the player to press Enter
+    input("Press enter to continue\n") # Wait for the player to press Enter
     warrior_health = 4
     player_health = 10
 
     while warrior_health > 0 and player_health > 0:
         if "Shovel" in WEAPON_TYPE:
-            input("Press Enter to take a shot.")  # Wait for the player to press Enter
+            input("Press Enter to take a shot.\n")  # Wait for the player to press Enter
 
             # Generate a random number between 1 and 6
             random_hit = random.randint(1, 6)
@@ -420,18 +420,18 @@ the warrior attacks you and you have {player_health} health left.
                 )
         else:
             print(wrong_weapon())
-            input("Press Enter to continue") # Wait for the player to press Enter
+            input("Press Enter to continue\n") # Wait for the player to press Enter
             room_6()
             break
     else:
         if player_health <= 0:
             print("You have been defeated. Game over.")
-            input("Press Enter to continue") # Wait for the player to press Enter
+            input("Press Enter to continue\n") # Wait for the player to press Enter
             death_scene()
 
         elif warrior_health <= 0:
             print("You defeated the Warrior. You win!")
-            input("Press Enter to continue") # Wait for the player to press Enter
+            input("Press Enter to continue\n") # Wait for the player to press Enter
             room_7_continue()
 
 def exit_scene():
@@ -450,7 +450,7 @@ def hieroglyphs_1():
     slow_print(story_hieroglyphs()) # Print the hieroglyphs from print_statements.py
     fast_print(story_hieroglyphs_1()) # Print the hieroglyphs 1 from print_statements.py
     # Wait for the player to press Enter
-    input("Press enter to continue and move into the room ahead")
+    input("Press enter to continue and move into the room ahead\n")
     room_1()
 
 def hieroglyphs_2():
@@ -460,8 +460,9 @@ def hieroglyphs_2():
     clear_screen()
     slow_print(story_hieroglyphs()) # Print the hieroglyphs from print_statements.py
     fast_print(story_hieroglyphs_2()) # Print the hieroglyphs 2 from print_statements.py
-    input("Press enter to continue from the room you are in") # Wait for the player to press Enter
+    input("Press enter to continue from the room you are in\n") # Wait for the player to press Enter
     room_5()
+
 
 
 main()
