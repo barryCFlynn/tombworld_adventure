@@ -41,7 +41,7 @@ def main():
             slower_print(f"Welcome, {PLAYER_NAME}.")
             while True:
                 # Ask the player if they are ready to play
-                game_input = input("Are you ready to escape? (y/n) \n")
+                game_input = input(" Are you ready to escape? (y/n) \n")
                 if game_input == "y":
                     room_intro()
                 elif game_input == "n":
@@ -303,6 +303,7 @@ def death_room_1():
     slow_print(story_death_room_1()) # Print the death room 1 from print_statements.py
     death_scene()
 
+
 def death_room_2():
     """
     Death 2 room function
@@ -312,6 +313,19 @@ def death_room_2():
     death_scene()
 
 
+def death_scene():
+    """
+    Death scene function
+    """
+    while True:
+        game_input = input(f"Game Over {PLAYER_NAME}, would you like to play again? (y/n) \n")
+        if game_input == "y":
+            main()
+        elif game_input == "n":
+            print("Until next time.")
+            sys.exit()
+        else:
+            print("Please enter a valid command.")
 
 def weapon_1():
     """

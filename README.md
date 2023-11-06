@@ -33,6 +33,11 @@ Happy coding!
 
 My README
 
+Bugs
+
+Death_Scene "no" answer looping and not exiting
+pyliny suggested using sys.exit() so imported sys and using this command to exit the program where needed
+
 Notes
 
 so the plan is to have multiple rooms and manage their decision making by typing their direction, i wonder if we could use another input to simplify it and also 
@@ -62,6 +67,24 @@ i want to add atleast 2 weapons a mining laser and something else. for use on ce
 credits
 
 https://textkool.com/ for ASCII art generator - used for game title
+
+
+Fights
+
+goals
+validate that you have collected one of two weapons (cannot collect both) then entering a room with a monster a fight room action the process to see if you beat the monster with a d6 dice roll requiring a hit requierment eg 2+ to make a kill. and add a enemy health counter and maybe a user counter
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 # TomBworld Adventure

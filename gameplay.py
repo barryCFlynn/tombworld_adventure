@@ -32,17 +32,3 @@ def clear_screen():
     Clear the terminal screen.
     """
     os.system("cls" if os.name == "nt" else "clear")
-
-def death_scene():
-    """
-    Death scene function
-    """
-    while True:
-        game_input = input(f"Game Over {PLAYER_NAME}, would you like to play again? (y/n) ")
-        if game_input == "y":
-            main()
-        elif game_input == "n":
-            print("Until next time.")
-            sys.exit()
-        else:
-            print("Please enter a valid command.")
