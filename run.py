@@ -339,9 +339,9 @@ def death_scene():
     while True:
         game_input = input(f"\nGame Over {PLAYER_NAME}, "
                            "would you like to play again? (y/n)")
-        if game_input.lower == "y":
+        if game_input.lower() == "y":
             main()
-        elif game_input.lower == "n":
+        elif game_input.lower() == "n":
             print("Until next time.")
             sys.exit()
         else:
@@ -361,9 +361,8 @@ def weapon_1():
         slow_print(story_weapon_1())  # Print story in game_stories.py
         WEAPON_TYPE.append("Mining Laser")
 
-    input("/nPress Enter to continue\n")  # Wait for the player to press Enter
+    input("\nPress Enter to continue\n")  # Wait for the player to press Enter
     room_3()
-
 
 
 def weapon_2():
@@ -379,7 +378,7 @@ def weapon_2():
         slow_print(story_weapon_2())  # Print the weapon 2 in game_stories.py
         WEAPON_TYPE.append("Shovel")
 
-    input("/nPress Enter to continue\n")  # Wait for the player to press Enter
+    input("\nPress Enter to continue\n")  # Wait for the player to press Enter
     room_6()
 
 
@@ -389,13 +388,12 @@ def fight_1():
     """
     clear_screen()
     slow_print(story_fight_1())  # Print story in game_stories.py
-    input("Press Enter to continue\n")  # Wait for the player to press Enter
     scarab_health = 3
     player_health = 10
 
     while scarab_health > 0 and player_health > 0:
         if "Mining Laser" in WEAPON_TYPE:
-            input("Press Enter to take a shot.\n")
+            input("\nPress Enter to take a shot.")
 
             # Generate a random number between 1 and 6
             random_hit = random.randint(1, 6)
@@ -420,12 +418,12 @@ the scarabs attack you and you have {player_health} health left.
     else:
         if player_health <= 0:
             print("You have been defeated. Game over.\n")
-            input("Press Enter to continue")  # Wait for Enter press
+            input("Press Enter to continue\n")  # Wait for Enter press
             death_scene()
 
         elif scarab_health <= 0:
             print("You defeated the scarabs. You win!\n")
-            input("Press Enter to continue")  # Wait for Enter press
+            input("Press Enter to continue\n")  # Wait for Enter press
             exit_scene()
 
 
@@ -435,13 +433,12 @@ def fight_2():
     """
     clear_screen()
     slow_print(story_fight_2())  # Print the fight 2 in game_stories.py
-    input("Press Enter to continue\n")  # Wait for Enter press
     warrior_health = 4
     player_health = 10
 
     while warrior_health > 0 and player_health > 0:
         if "Shovel" in WEAPON_TYPE:
-            input("Press Enter to take a shot.\n")  # Wait for Enter press
+            input("\nPress Enter to take a shot.\n")  # Wait for Enter press
 
             # Generate a random number between 1 and 6
             random_hit = random.randint(1, 6)
@@ -465,12 +462,12 @@ the warrior attacks you and you have {player_health} health left.
             break
     else:
         if player_health <= 0:
-            print("You have been defeated. Game over.")
+            print("You have been defeated. Game over.\n")
             input("Press Enter to continue\n")  # Wait for Enter press
             death_scene()
 
         elif warrior_health <= 0:
-            print("You defeated the Warrior. You win!")
+            print("You defeated the Warrior. You win!\n")
             input("Press Enter to continue\n")  # Wait for Enter press
             room_7_continue()
 

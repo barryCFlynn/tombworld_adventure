@@ -157,7 +157,8 @@ def story_room_7_continue():
     Print statement for room 7 continue.
     """
     print_statement = r"""
-You have defeated the Necron warrior, but not without injury. You stand in the
+You have defeated the Necron warrior, but not without injury. Suddenly a
+enormous door closes over the passage you came from. You stand in the
 same room, your own wounds a reminder of the battle.
 
 Two passages stretch before you. The one directly ahead reverberates with eerie
@@ -255,8 +256,8 @@ health is a mere 10, while the enemy Scarabs number 3. The odds are against you
 as you raise your Mining Laser, ready to take a chance.
 
 A successful hit requires a roll of a D6 dice, and you must achieve a 3 or
-higherto land a blow and reduce their health. If you miss the Scarabs retaliate
-and reduce your health.
+higher to land a blow and reduce their health. If you miss the Scarabs
+retaliate and reduce your health.
 """
     return print_statement
 
@@ -273,7 +274,7 @@ You choose to fight, rushing the wounded Necron warrior with your shovel.
 In a swift, intense clash, sparks fly as metal meets metal. The battle rages
 on, a desperate struggle between flesh and steel.
 
-A successful hit requires a roll of a D6 dice, and you must achieve a 3 or
+A successful hit requires a roll of a D6 dice, and you must achieve a 4 or
 higher to land a blow and reduce their health. If you miss the Warrior
 retaliates and reduces your health.
 """
