@@ -5,96 +5,112 @@ def story_main():
     Print statement for the main story.
     """
     print_statement = r"""
-Welcome to Tombworld Adventure, a gripping text-based 
-journey set in the grim and mysterious universe of Warhammer 
-40,000. You were a miner toiling on a barren planet, but a 
-strange blackout has transported you to a Necron tomb world. 
-Navigate eerie catacombs, decipher ancient hieroglyphs, and 
-confront unspeakable terrors as you strive for survival and 
-your escape. Are you prepared to face the malevolent forces 
-of the Necrons and find your path back to the world you once knew?
+Welcome to Tombworld Adventure, a gripping text-based journey set in the grim
+and mysterious universe of Warhammer 40,000. You were a miner toiling on a
+barren planet, but a strange blackout has transported you to a Necron
+tomb world.
+
+Navigate eerie catacombs, decipher ancient hieroglyphs, and confront
+unspeakable terrors as you strive for survival and your escape. Are you
+prepared to face the malevolent forces of the Necrons and find your path back
+to the world you once knew?
 """
     return print_statement
+
 
 def story_intro():
     """
     Print statement for the intro.
     """
     print_statement = r"""
-You awaken in a dimly lit chamber, the cold and metallic floor
-beneath you. The air is thick with an otherworldly chill. You 
-can hear the faint hum of ancient machinery echoing through the vast 
-catacombs. As your eyes adjust, you see eerie hieroglyphs etched into 
-the walls, and the unmistakable mark of the Necrons is all around.
+You awaken in a dimly lit chamber, the cold and metallic floor beneath you.
+The air is thick with an otherworldly chill. You can hear the faint hum of
+ancient machinery echoing through the vast catacombs.
+
+As your eyes adjust, you see eerie hieroglyphs etched into the walls, and the
+unmistakable mark of the Necrons is all around.
 """
     return print_statement
+
 
 def story_room_1():
     """
     Print statement for room 1.
     """
     print_statement = r"""
-As you step into the room ahead, the air grows colder, and the dim light 
-reveals intricate carvings on the walls, you hear the eerie echoes of 
-metallic footsteps approaching from the door to your right, a foreboding 
-presence drawing nearer but you see another passageway forward.
+As you step into the room ahead, the air grows colder, and the dim light
+reveals intricate carvings on the walls. 
+
+You hear the eerie echoes of metallic footsteps approaching from the door to
+your right, a foreboding presence drawing nearer. But you see another 
+passageway forward.
 """
     return print_statement
+
 
 def story_room_2():  
     """
     Print statement for room 2.
     """
     print_statement = r"""
-As you cautiously enter the room ahead, the chamber is bathed in an eerie, 
-dim light, casting an eldritch green glow that pervades the air with an 
-otherworldly energy. Amidst this mysterious ambiance, you're drawn to a curious 
-sight. An ethereal white light emanating from the room to your left. Its source 
-and purpose remain enigmatic, yet it fills you with a glimmer of hope."
+As you cautiously enter the room ahead, the chamber is bathed in an eerie,
+dim light, casting an eldritch green glow that pervades the air with an
+otherworldly energy. 
+
+Amidst this mysterious ambiance, you're drawn to a curious sight. An ethereal
+white light emanating from the room to your left. Its source and purpose
+remain enigmatic, yet it fills you with a glimmer of hope.
 """
     return print_statement
+
 
 def story_room_3():
     """
     Print statement for room 3.
     """
     print_statement = r"""
-As you enter the room with the white light, it's veiled in an unsettling darkness. Your eyes 
-gradually adapt to the obscurity, and you're drawn to a flickering white light originating 
-from an unclear object concealed in the corner. In the dimly lit surroundings, your attention 
-is also captured by an open doorway to your right, hinting at an inviting path to explore. 
-However, amidst the uncertainty, you hear the disconcerting sound of metal skittering across stone.
+As you enter the room with the white light, it's veiled in unsettling darkness.
+Your eyes gradually adapt to the obscurity, and you're drawn to a flickering
+white light in the corner.
+
+In the dimly lit surroundings, your attention is also captured by an open
+doorway to your right, hinting at an inviting path to explore. However,
+amidst the uncertainty, you hear the disconcerting sound of metal skittering
+across stone.
 """
     return print_statement
+
 
 def story_room_4():
     """
     Print statement for room 4.
     """
     print_statement = r"""
-You step into the room and come face to face with a swarm of small insect-like creatures. 
-Something in your mind tells you they are Scarabs, the Necron tomb maintenance creatures. 
-You notice a promising open passageway to your right, but a barrier of Scarabs stands between you 
-and the path. They have not detected your presence as a threat yet, 
-leaving you with a crucial decision: run back the way you came or attempt to fight.
+You step into the room and face a swarm of small insect-like creatures.
+Your instincts label them as Scarabs, Necron tomb maintenance creatures.
+
+A promising passageway is to your right, but a barrier of Scarabs blocks it.
+They haven't seen you as a threat, leaving you with a choice: retreat or fight.
 """
     return print_statement
+
 
 def story_room_5():
     """
     Print statement for room 5.
     """
     print_statement = r"""
-As you cautiously advance into the chamber, the surroundings reveal an eerie scene.
-Directly ahead, a passage looms in the dim light, but a foreboding presence lingers there,
-a palpable sense of danger.
+As you cautiously advance into the chamber, the surroundings reveal an eerie
+scene. Directly ahead, a passage looms in the dim light, but a foreboding
+presence lingers there, a palpable sense of danger.
 
-To your right, an alternative route beckons, seeming the wiser choice. The walls are
-adorned with ancient hieroglyphs, their symbols etched into the stone, hinting at cryptic
-knowledge. It's a room filled with a sense of unease, and your path must be
-chosen carefully.
+To your right, an alternative route beckons, seeming the wiser choice. The
+walls are adorned with ancient hieroglyphs, their symbols etched into the
+stone, hinting at cryptic knowledge. It's a room filled with a sense of
+unease, and your path must be chosen carefully.
 """
     return print_statement
+
 
 def story_room_6():
     """
@@ -110,6 +126,7 @@ there is danger that way. This chamber is a crossroads of choices, each fraught 
 uncertainty and potential peril, and your next move will determine your fate in this necron tomb.
 """
     return print_statement
+
 
 def story_room_7():
     """
@@ -129,6 +146,7 @@ you came?
 """
     return print_statement
 
+
 def story_room_7_continue():
     """
     Print statement for room 7 continue.
@@ -145,6 +163,7 @@ this labyrinthine tomb, the choices ahead shrouded in uncertainty and danger.
 """
     return print_statement
 
+
 def story_death_room_1():
     """
     Print statement for death room 1.
@@ -158,6 +177,7 @@ unfeeling metal bodies prove too much. Your vision fades as their unrelenting on
 overwhelms you, and you succumb to the darkness, becoming another lost soul in the tomb world.
 """
     return print_statement
+
 
 def story_death_room_2():
     """
@@ -174,6 +194,7 @@ leaving you as one more lost soul in the necropolis of the tomb world.
 """
     return print_statement
 
+
 def story_weapon_1():
     """
     Print statement for weapon 1.
@@ -185,6 +206,7 @@ Realizing its potential usefulness, you carefully stow it in your bag, thoughts 
 utility racing through your mind.
 """
     return print_statement
+
 
 def story_weapon_2():
     """
@@ -205,6 +227,7 @@ reminder of the perils that surround you.
 """
     return print_statement
 
+
 def story_fight_1():
     """
     Print statement for fight 1.
@@ -219,6 +242,7 @@ diminishing your own.
 """
     return print_statement
 
+
 def story_fight_2():
     """
     Print statement for fight 2.
@@ -232,6 +256,7 @@ and steel.
 """
     return print_statement
 
+
 def wrong_weapon():
     """
     Print statement for wrong weapon.
@@ -240,6 +265,7 @@ def wrong_weapon():
 You don't have the right weapon to fight and you retreat back to the room you came from.
 """
     return print_statement
+
 
 def story_exit_scene():
     """
@@ -255,6 +281,7 @@ utters, 'Shall we try again?'
 """
     return print_statement
 
+
 def story_hieroglyphs():
     """
     Print statement for hieroglyphs.
@@ -264,6 +291,7 @@ You approach the hieroglyphs, they glow with green light and are in a
 language you dont understand but you hear a voice in your head.
 """
     return print_statement
+
 
 def story_hieroglyphs_1():
     """
@@ -289,6 +317,7 @@ As you decipher the hieroglyphs, you catch glimpses of this dark history, filled
 promises of power, immortality, and a looming sense of malevolence.
 """
     return print_statement
+
 
 def story_hieroglyphs_2():
     """

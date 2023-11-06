@@ -5,7 +5,7 @@
 # import os
 import random
 import sys
-from print_statements import *
+from game_stories import *
 from gameplay import fast_print, slow_print, slower_print, clear_screen
 
 # Global variables for the game
@@ -18,20 +18,35 @@ def main():
     """
     clear_screen()
     print(r""" 
-████████╗ ██████╗ ███╗   ███╗██████╗ ██╗    ██╗ ██████╗ ██████╗ ██╗   ██████╗     
-╚══██╔══╝██╔═══██╗████╗ ████║██╔══██╗██║    ██║██╔═══██╗██╔══██╗██║   ██╔══██╗    
-   ██║   ██║   ██║██╔████╔██║██████╔╝██║ █╗ ██║██║   ██║██████╔╝██║   ██║  ██║    
-   ██║   ██║   ██║██║╚██╔╝██║██╔══██╗██║███╗██║██║   ██║██╔══██╗██║   ██║  ██║    
-   ██║   ╚██████╔╝██║ ╚═╝ ██║██████╔╝╚███╔███╔╝╚██████╔╝██║  ██║█████╗██████╔╝    
-   ╚═╝    ╚═════╝ ╚═╝     ╚═╝╚═════╝  ╚══╝╚══╝  ╚═════╝ ╚═╝  ╚═╝╚════╝╚═════╝     
-                                                                                    
- █████╗ ██████╗ ██╗   ██╗███████╗███╗   ██╗████████╗██╗   ██╗██████╗ ███████╗       
-██╔══██╗██╔══██╗██║   ██║██╔════╝████╗  ██║╚══██╔══╝██║   ██║██╔══██╗██╔════╝       
-███████║██║  ██║██║   ██║█████╗  ██╔██╗ ██║   ██║   ██║   ██║██████╔╝█████╗         
-██╔══██║██║  ██║╚██╗ ██╔╝██╔══╝  ██║╚██╗██║   ██║   ██║   ██║██╔══██╗██╔══╝         
-██║  ██║██████╔╝ ╚████╔╝ ███████╗██║ ╚████║   ██║   ╚██████╔╝██║  ██║███████╗       
-╚═╝  ╚═╝╚═════╝   ╚═══╝  ╚══════╝╚═╝  ╚═══╝   ╚═╝    ╚═════╝ ╚═╝  ╚═╝╚══════╝       
+████████╗ ██████╗ ███╗   ███╗██████╗ ██╗    ██╗ ██████╗ ██████╗ ██╗   ██████╗
+╚══██╔══╝██╔═══██╗████╗ ████║██╔══██╗██║    ██║██╔═══██╗██╔══██╗██║   ██╔══██╗
+   ██║   ██║   ██║██╔████╔██║██████╔╝██║ █╗ ██║██║   ██║██████╔╝██║   ██║  ██║
+   ██║   ██║   ██║██║╚██╔╝██║██╔══██╗██║███╗██║██║   ██║██╔══██╗██║   ██║  ██║
+   ██║   ╚██████╔╝██║ ╚═╝ ██║██████╔╝╚███╔███╔╝╚██████╔╝██║  ██║█████╗██████╔╝
+   ╚═╝    ╚═════╝ ╚═╝     ╚═╝╚═════╝  ╚══╝╚══╝  ╚═════╝ ╚═╝  ╚═╝╚════╝╚═════╝
+       
+ █████╗ ██████╗ ██╗   ██╗███████╗███╗   ██╗████████╗██╗   ██╗██████╗ ███████╗
+██╔══██╗██╔══██╗██║   ██║██╔════╝████╗  ██║╚══██╔══╝██║   ██║██╔══██╗██╔════╝
+███████║██║  ██║██║   ██║█████╗  ██╔██╗ ██║   ██║   ██║   ██║██████╔╝█████╗
+██╔══██║██║  ██║╚██╗ ██╔╝██╔══╝  ██║╚██╗██║   ██║   ██║   ██║██╔══██╗██╔══╝
+██║  ██║██████╔╝ ╚████╔╝ ███████╗██║ ╚████║   ██║   ╚██████╔╝██║  ██║███████╗
+╚═╝  ╚═╝╚═════╝   ╚═══╝  ╚══════╝╚═╝  ╚═══╝   ╚═╝    ╚═════╝ ╚═╝  ╚═╝╚══════╝
                                                                                                                                                                                                                                                                                        
+""")
+    print(r"""
+████████╗ ██████╗ ███╗   ███╗██████╗ ██╗    ██╗ ██████╗ ██████╗ ██╗
+╚══██╔══╝██╔═══██╗████╗ ████║██╔══██╗██║    ██║██╔═══██╗██╔══██╗██║
+   ██║   ██║   ██║██╔████╔██║██████╔╝██║ █╗ ██║██║   ██║██████╔╝██║
+   ██║   ██║   ██║██║╚██╔╝██║██╔══██╗██║███╗██║██║   ██║██╔══██╗██║
+   ██║   ╚██████╔╝██║ ╚═╝ ██║██████╔╝╚███╔███╔╝╚██████╔╝██║  ██║█████╗
+   ╚═╝    ╚═════╝ ╚═╝     ╚═╝╚═════╝  ╚══╝╚══╝  ╚═════╝ ╚═╝  ╚═╝╚════╝
+                                                                                    
+ █████╗ ██████╗ ██╗   ██╗██████╗███╗   ██╗████████╗██╗  ██╗██████╗
+██╔══██╗██╔══██╗██║   ██║██╔════╝████╗  ██║╚══██╔══╝██║  ██║██╔══██╗
+███████║██║  ██║██║   ██║█████╗  ██╔██╗ ██║   ██║   ██║  ██║██████╔╝
+██╔══██║██║  ██║╚██╗ ██╔╝██╔══╝  ██║╚██╗██║   ██║   ██║  ██║██╔══██╗
+██║  ██║██████╔╝ ╚████╔╝ ███████╗██║ ╚████║   ██║   ╚█████╔╝██║  ██║
+╚═╝  ╚═╝╚═════╝   ╚═══╝  ╚══════╝╚═╝  ╚═══╝   ╚═╝    ╚═════╝ ╚═╝  ╚═                                                                                                                                                                                                                                                           
 """)
     slow_print(story_main()) # Print the main story from print_statements.py
     global PLAYER_NAME
@@ -48,9 +63,9 @@ def main():
                     print("Until next time.")
                     sys.exit()
                 else:
-                    print("Please enter a valid command.")
+                    print("Please Enter a valid command.")
         else:
-            print("Please enter a valid name with only alphabetical characters.")
+            print("Please Enter a valid name with only alphabetical characters.")
 
 
 def room_intro():
@@ -325,7 +340,7 @@ def death_scene():
             print("Until next time.")
             sys.exit()
         else:
-            print("Please enter a valid command.")
+            print("Please Enter a valid command.")
 
 def weapon_1():
     """
@@ -335,7 +350,7 @@ def weapon_1():
     slow_print(story_weapon_1()) # Print the weapon 1 from print_statements.py
     global WEAPON_TYPE
     WEAPON_TYPE.append("Mining Laser")
-    input("Press enter to continue\n") # Wait for the player to press Enter
+    input("Press Enter to continue\n") # Wait for the player to press Enter
     room_3()
 
 def weapon_2():
@@ -346,7 +361,7 @@ def weapon_2():
     slow_print(story_weapon_2()) # Print the weapon 2 from print_statements.py
     global WEAPON_TYPE
     WEAPON_TYPE.append("Shovel")
-    input("Press enter to continue\n") # Wait for the player to press Enter
+    input("Press Enter to continue\n") # Wait for the player to press Enter
     room_6()
 
 def fight_1():
@@ -355,7 +370,7 @@ def fight_1():
     """
     clear_screen()
     slow_print(story_fight_1()) # Print the fight 1 from print_statements.py
-    input("Press enter to continue\n") # Wait for the player to press Enter
+    input("Press Enter to continue\n") # Wait for the player to press Enter
     scarab_health = 3
     player_health = 10
 
@@ -404,7 +419,7 @@ def fight_2():
     """
     clear_screen()
     slow_print(story_fight_2()) # Print the fight 2 from print_statements.py
-    input("Press enter to continue\n") # Wait for the player to press Enter
+    input("Press Enter to continue\n") # Wait for the player to press Enter
     warrior_health = 4
     player_health = 10
 
@@ -463,7 +478,7 @@ def hieroglyphs_1():
     slow_print(story_hieroglyphs()) # Print the hieroglyphs from print_statements.py
     fast_print(story_hieroglyphs_1()) # Print the hieroglyphs 1 from print_statements.py
     # Wait for the player to press Enter
-    input("Press enter to continue and move into the room ahead\n")
+    input("Press Enter to continue and move into the room ahead\n")
     room_1()
 
 def hieroglyphs_2():
@@ -473,7 +488,7 @@ def hieroglyphs_2():
     clear_screen()
     slow_print(story_hieroglyphs()) # Print the hieroglyphs from print_statements.py
     fast_print(story_hieroglyphs_2()) # Print the hieroglyphs 2 from print_statements.py
-    input("Press enter to continue from the room you are in\n") # Wait for the player to press Enter
+    input("Press Enter to continue from the room you are in\n") # Wait for the player to press Enter
     room_5()
 
 
