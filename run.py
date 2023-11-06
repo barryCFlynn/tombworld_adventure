@@ -42,9 +42,9 @@ def main():
             while True:
                 # Ask the player if they are ready to play
                 game_input = input(" Are you ready to escape? (y/n) \n")
-                if game_input == "y":
+                if game_input.lower() == "y":
                     room_intro()
-                elif game_input == "n":
+                elif game_input.lower() == "n":
                     print("Until next time.")
                     sys.exit()
                 else:
