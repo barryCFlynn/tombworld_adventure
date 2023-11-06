@@ -526,7 +526,7 @@ diminishing your own.
     player_health = 10
 
     while scarab_health > 0 and player_health > 0:
-        if WEAPON_TYPE == "Mining Laser":
+        if "Mining Laser" in WEAPON_TYPE:
             input("Press Enter to take a shot.")  # Wait for the player to press Enter
 
             # Generate a random number between 1 and 6
@@ -587,14 +587,14 @@ and steel.
     player_health = 10
 
     while warrior_health > 0 and player_health > 0:
-        if WEAPON_TYPE == "Shovel":
+        if "Shovel" in WEAPON_TYPE:
             input("Press Enter to take a shot.")  # Wait for the player to press Enter
 
             # Generate a random number between 1 and 6
             random_hit = random.randint(1, 6)
 
             if random_hit >= 4:
-                scarab_health -= 1
+                warrior_health -= 1
                 print(
 f"""
 You rolled a {random_hit} and hit the enemy!
@@ -624,7 +624,7 @@ You don't have the right weapon to fight and you retreat back to the room you ca
             input("Press Enter to continue") # Wait for the player to press Enter
             death_scene()
 
-        elif scarab_health <= 0:
+        elif warrior_health <= 0:
             print("You defeated the Warrior. You win!")
             input("Press Enter to continue") # Wait for the player to press Enter
             room_7_continue()
@@ -713,4 +713,5 @@ the Necrons.
     input("Press enter to continue from the room you are in") # Wait for the player to press Enter
     room_5()
 
-main()
+room_6()
+# main()
