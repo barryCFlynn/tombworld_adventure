@@ -69,24 +69,6 @@ credits
 https://textkool.com/ for ASCII art generator - used for game title
 
 
-Fights
-
-goals
-validate that you have collected one of two weapons (cannot collect both) then entering a room with a monster a fight room action the process to see if you beat the monster with a d6 dice roll requiring a hit requierment eg 2+ to make a kill. and add a enemy health counter and maybe a user counter
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 # TomBworld Adventure
 
 Welcome to 'Tombworld Adventure' a text-based adventure game that plunges you into the grim and foreboding universe of Warhammer 40,000. You're a miner on a desolate planet, working diligently until a mysterious blackout transports you to the heart of a Necron tomb world. Navigate treacherous catacombs, decipher ancient hieroglyphs, and battle unspeakable horrors in your quest for survival and escape. Can you overcome the malevolent forces of the Necrons and find your way back to the world you once knew?
