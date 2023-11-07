@@ -1,289 +1,185 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    <head>
-        <!-- meta elements -->
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description"
-            content="Explore the eerie world of Tombworld Adventure, a text-based journey set in the Warhammer 40,000 universe. Confront Necron tomb worlds, decipher ancient hieroglyphs, and make life-and-death choices as you strive for survival and escape. Are you ready to face the malevolent forces of the Necrons?">
-        <meta name="keywords"
-            content="Tombworld Adventure, Warhammer 40,000, Text-based game, Necron tomb world, Survival, Escape, Hieroglyphs, Malevolent forces, Adventure game, Sci-fi narrative">
-        <meta name="author" content="Barry Flynn">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Gentium+Plus&display=swap" rel="stylesheet">
-        <script src="https://kit.fontawesome.com/5366bdfdf4.js" crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/xterm/3.14.5/xterm.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/xterm/3.14.5/addons/attach/attach.js"></script>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Explore the eerie world of Tombworld Adventure, a text-based journey set in the Warhammer 40,000 universe. Confront Necron tomb worlds, decipher ancient hieroglyphs, and make life-and-death choices as you strive for survival and escape. Are you ready to face the malevolent forces of the Necrons?">
+    <meta name="keywords"
+        content="Tombworld Adventure, Warhammer 40,000, Text-based game, Necron tomb world, Survival, Escape, Hieroglyphs, Malevolent forces, Adventure game, Sci-fi narrative">
+    <meta name="author" content="Barry Flynn">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gentium+Plus&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/5366bdfdf4.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xterm/3.14.5/xterm.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xterm/3.14.5/addons/attach/attach.js"></script>
 
-        <!-- site title and favicon -->
-        <title>Tombworld Adventure Game</title>
-        <link rel="icon" type="image/png" href="/assets/images/GH_Icons_Necron.png">
+    <title>Tombworld Adventure Game</title>
+    <link rel="icon" type="image/png" href="/assets/images/GH_Icons_Necron.png">
 
-        <style>
-            /* general page styling */
-            *,
-            *::before,
-            *::after {
-                box-sizing: border-box;
-            }
+    <style>
+        body {
+            font-family: Arial;
+        }
 
-            * {
-                margin: 0;
-                padding: 0;
-            }
+        /**
+        * Default styles for xterm.js
+        */
 
-            body {
-                font-family: 'Gentium Plus', sans-serif;
-                color: #FFFFFF;
-                margin: 0;
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                width: auto;
-                height: 100vh;
-                background-color: #02084B;
-            }
+        .xterm {
+            font-feature-settings: "liga"0;
+            position: relative;
+            user-select: none;
+            -ms-user-select: none;
+            -webkit-user-select: none;
+        }
 
-            main {
-                clear: both;
-            }
+        .xterm.focus,
+        .xterm:focus {
+            outline: none;
+        }
 
-            /* header */
-            header {
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                z-index: +1;
-                top: 10px;
-            }
-
-            h1 {
-                display: flex;
-                justify-content: center;
-                font-size: 70px;
-                width: 100%;
-                align-items: center;
-            }
-
-            /* background image */
-            a {
-                width: 100%;
-                height: auto;
-                margin: 0;
-            }
-
-            #background-image {
-                margin: 0;
-                z-index: -1;
-                width: 100%;
-                height: auto;
-            }
-
-            /* code to center the button and terminal elements taken from Stack Overflow - more details in README */
-            /* button */
-            button {
-                width: 200px;
-                height: 40px;
-                background-color: #02084B;
-                border: 3px solid #F5C116;
-                color: #FFFFFF;
-                text-transform: uppercase;
-                margin: 20px;
-                border-radius: 8px;
-                z-index: +1;
-                position: absolute;
-                top: 150px;
-                left: 50%;
-                transform: translate(-50%, -50%);
-            }
-
-            /* terminal */
-            #terminal {
-                z-index: +1;
-                position: absolute;
-                top: 450px;
-                left: 50%;
-                transform: translate(-50%, -50%);
-            }
-
+        .xterm .xterm-helpers {
+            position: absolute;
+            top: 0;
             /**
-            * Default styles for xterm.js
-            */
+        * The z-index of the helpers must be higher than the canvases in order for
+        * IMEs to appear on top.
+        */
+            z-index: 5;
+        }
 
-            .xterm {
-                font-feature-settings: "liga"0;
-                position: relative;
-                user-select: none;
-                -ms-user-select: none;
-                -webkit-user-select: none;
-            }
+        .xterm .xterm-helper-textarea {
+            padding: 0;
+            border: 0;
+            margin: 0;
+            /* Move textarea out of the screen to the far left, so that the cursor is not visible */
+            position: absolute;
+            opacity: 0;
+            left: -9999em;
+            top: 0;
+            width: 0;
+            height: 0;
+            z-index: -5;
+            /** Prevent wrapping so the IME appears against the textarea at the correct position */
+            white-space: nowrap;
+            overflow: hidden;
+            resize: none;
+        }
 
-            .xterm.focus,
-            .xterm:focus {
-                outline: none;
-            }
+        .xterm .composition-view {
+            /* TODO: Composition position got messed up somewhere */
+            background: #000;
+            color: #FFF;
+            display: none;
+            position: absolute;
+            white-space: nowrap;
+            z-index: 1;
+        }
 
-            .xterm .xterm-helpers {
-                position: absolute;
-                top: 0;
-                /**
-            * The z-index of the helpers must be higher than the canvases in order for
-            * IMEs to appear on top.
-            */
-                z-index: 5;
-            }
+        .xterm .composition-view.active {
+            display: block;
+        }
 
-            .xterm .xterm-helper-textarea {
-                padding: 0;
-                border: 0;
-                margin: 0;
-                /* Move textarea out of the screen to the far left, so that the cursor is not visible */
-                position: absolute;
-                opacity: 0;
-                left: -9999em;
-                top: 0;
-                width: 0;
-                height: 0;
-                z-index: -5;
-                /** Prevent wrapping so the IME appears against the textarea at the correct position */
-                white-space: nowrap;
-                overflow: hidden;
-                resize: none;
-            }
+        .xterm .xterm-viewport {
+            /* On OS X this is required in order for the scroll bar to appear fully opaque */
+            background-color: #000;
+            overflow-y: scroll;
+            cursor: default;
+            position: absolute;
+            right: 0;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            background-color: rgb(0, 0, 0);
+            width: 730px;
+        }
 
-            .xterm .composition-view {
-                /* TODO: Composition position got messed up somewhere */
-                background: #000;
-                color: #FFF;
-                display: none;
-                position: absolute;
-                white-space: nowrap;
-                z-index: 1;
-            }
+        .xterm .xterm-screen {
+            position: relative;
+        }
 
-            .xterm .composition-view.active {
-                display: block;
-            }
+        .xterm .xterm-screen canvas {
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
 
-            .xterm .xterm-viewport {
-                /* On OS X this is required in order for the scroll bar to appear fully opaque */
-                background-color: #000;
-                overflow-y: scroll;
-                cursor: default;
-                position: absolute;
-                right: 0;
-                left: 0;
-                top: 0;
-                bottom: 0;
-                background-color: rgb(0, 0, 0);
-                width: 730px;
-            }
+        .xterm .xterm-scroll-area {
+            visibility: hidden;
+        }
 
-            .xterm .xterm-screen {
-                position: relative;
-            }
+        .xterm-char-measure-element {
+            display: inline-block;
+            visibility: hidden;
+            position: absolute;
+            top: 0;
+            left: -9999em;
+            line-height: normal;
+        }
 
-            .xterm .xterm-screen canvas {
-                position: absolute;
-                left: 0;
-                top: 0;
-            }
+        .xterm {
+            cursor: text;
+        }
 
-            .xterm .xterm-scroll-area {
-                visibility: hidden;
-            }
+        .xterm.enable-mouse-events {
+            /* When mouse events are enabled (eg. tmux), revert to the standard pointer cursor */
+            cursor: default;
+        }
 
-            .xterm-char-measure-element {
-                display: inline-block;
-                visibility: hidden;
-                position: absolute;
-                top: 0;
-                left: -9999em;
-                line-height: normal;
-            }
+        .xterm.xterm-cursor-pointer {
+            cursor: pointer;
+        }
 
-            .xterm {
-                cursor: text;
-            }
+        .xterm.column-select.focus {
+            /* Column selection mode */
+            cursor: crosshair;
+        }
 
-            .xterm.enable-mouse-events {
-                /* When mouse events are enabled (eg. tmux), revert to the standard pointer cursor */
-                cursor: default;
-            }
+        .xterm .xterm-accessibility,
+        .xterm .xterm-message {
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            z-index: 10;
+            color: transparent;
+        }
 
-            .xterm.xterm-cursor-pointer {
-                cursor: pointer;
-            }
+        .xterm .live-region {
+            position: absolute;
+            left: -9999px;
+            width: 1px;
+            height: 1px;
+            overflow: hidden;
+        }
 
-            .xterm.column-select.focus {
-                /* Column selection mode */
-                cursor: crosshair;
-            }
+        .xterm-dim {
+            opacity: 0.5;
+        }
 
-            .xterm .xterm-accessibility,
-            .xterm .xterm-message {
-                position: absolute;
-                left: 0;
-                top: 0;
-                bottom: 0;
-                right: 0;
-                z-index: 10;
-                color: transparent;
-            }
+        .xterm-underline {
+            text-decoration: underline;
+        }
 
-            .xterm .live-region {
-                position: absolute;
-                left: -9999px;
-                width: 1px;
-                height: 1px;
-                overflow: hidden;
-            }
+        button {
+            width: 200px;
+            height: 40px;
+            background-color: #04120a;
+            border: 1px solid rgb(23, 22, 22);
+            color: #10ab13;
+            text-transform: uppercase;
+            margin: 10px;
+            border-radius: 8px;
+        }
+    </style>
+</head>
 
-            .xterm-dim {
-                opacity: 0.5;
-            }
-
-            .xterm-underline {
-                text-decoration: underline;
-            }
-
-            /* footer */
-            footer {
-                background-color: #02084B;
-                width: 100%;
-                height: 50px;
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                font-size: 20px;
-                padding: 0px 20px;
-            }
-
-            footer i {
-                color: #FFFFFF;
-                font-size: 20px;
-                padding: 0px 5px;
-            }
-
-            footer i:hover {
-                color: #F5C116;
-            }
-
-            footer ul {
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                list-style: none;
-                padding: 10px;
-                padding-left: 10px;
-            }
-        </style>
-    </head>
-
-    @{body}
+@{body}
 
 </html>
