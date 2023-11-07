@@ -8,14 +8,13 @@ def story_main():
     Print statement for the main story.
     """
     print_statement = r"""
-Welcome to Tombworld Adventure, a gripping text-based journey set in the grim
-and mysterious universe of Warhammer 40,000. You are a miner toiling on a
-barren planet, but a strange blackout has transported you within a Necron
-Tomb World.
-Navigate eerie catacombs, decipher ancient hieroglyphs, and confront
-unspeakable terrors as you strive for survival and your escape. Are you
-prepared to face the malevolent forces of the Necrons and find your path back
-to the world you once knew?
+Welcome to Tombworld Adventure, a gripping text-based journey set in the dark
+and mysterious Warhammer 40,000 universe. You were a miner on a barren planet,
+but a strange blackout has transported you to a Necron Tomb World.
+
+Navigate eerie catacombs, decipher ancient hieroglyphs, and confront 
+unspeakable terrors as you strive for survival and escape. Face the malevolent
+forces of the Necrons and find your path home.
 """
     return print_statement
 
