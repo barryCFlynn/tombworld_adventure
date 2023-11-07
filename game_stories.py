@@ -9,10 +9,9 @@ def story_main():
     """
     print_statement = r"""
 Welcome to Tombworld Adventure, a gripping text-based journey set in the grim
-and mysterious universe of Warhammer 40,000. You were a miner toiling on a
-barren planet, but a strange blackout has transported you to a Necron
-tomb world.
-
+and mysterious universe of Warhammer 40,000. You are a miner toiling on a
+barren planet, but a strange blackout has transported you within a Necron
+Tomb World.
 Navigate eerie catacombs, decipher ancient hieroglyphs, and confront
 unspeakable terrors as you strive for survival and your escape. Are you
 prepared to face the malevolent forces of the Necrons and find your path back
