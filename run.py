@@ -1,9 +1,8 @@
 """
-imports for the game
+This is the main file for the game
 """
 
-# import time
-# import os
+# Importing modules
 import random
 import sys
 from game_stories import (
