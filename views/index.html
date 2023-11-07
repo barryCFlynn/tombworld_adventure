@@ -1,27 +1,69 @@
-<body>
-    <button onclick="window.location.reload()">Run Program</button>
-    <div id="terminal"></div>
+<!DOCTYPE html>
+<html lang="en">
 
-    <script>
-        var term = new Terminal({
-            cols: 80,
-            rows: 24
-        });
-        term.open(document.getElementById('terminal'));
-        term.writeln('Running startup command: python3 run.py');
-        term.writeln('');
+    <head>
+        <!-- site title and favicon -->
+        <title>Tombworld Adventure Game</title>
+        <link rel="icon" type="image/png" href="https://i.imgur.com/ON6Csrr.png">
+    </head>
 
-        var ws = new WebSocket(location.protocol.replace('http', 'ws') + '//' + location.hostname + (location.port ? (
-            ':' + location.port) : '') + '/');
+    <body>
+        <!-- header -->
+        <header>
+            <h1>Tombworld Adventure Game</h1>
+        </header>
 
-        ws.onopen = function () {
-            new attach.attach(term, ws);
-        };
+        <!-- main -->
+        <main>
+            <!-- background image -->
+            <div>
+                <a><img id="background-image" src="https://i.imgur.com/dwmcwhp.png"
+                        alt="Albus Dumbledore and Harry Potter graphic icons on a dark blue background scattered with yellow stars." /></a>
+            </div>
+            <!-- button -->
+            <button onclick="window.location.reload()">Run Game</button>
+            <!-- terminal -->
+            <div id="terminal"></div>
+            <script>
+                var term = new Terminal({
+                    cols: 80,
+                    rows: 24
+                });
+                term.open(document.getElementById('terminal'));
+                term.writeln('');
 
-        ws.onerror = function (e) {
-            console.log(e);
-        };
-        // Set focus in the terminal
-        document.getElementsByClassName("xterm-helper-textarea")[0].focus();
-    </script>
-</body>
+                var ws = new WebSocket(location.protocol.replace('http', 'ws') + '//' + location.hostname + (location.port ?
+                    (
+                        ':' + location.port) : '') + '/');
+
+                ws.onopen = function () {
+                    new attach.attach(term, ws);
+                };
+
+                ws.onerror = function (e) {
+                    console.log(e);
+                };
+                // Set focus in the terminal
+                document.getElementsByClassName("xterm-helper-textarea")[0].focus();
+            </script>
+        </main>
+
+        <!-- footer -->
+        <footer>
+            <ul>
+                <!-- site name -->
+                <li>Tombworld Adventure Game &copy;</li>
+                <!-- about site -->
+                <li>This website was created by Barry Flynn as project and has no commercial purpose.</li>
+                <!-- site creator social media links -->
+                <li>
+                    <a href="https://github.com/barryCFlynn/" target="_blank"
+                        aria-label="Link to Barry Flynn's GitHub profile"><i
+                            class="fa-brands fa-github-alt"></i></a>
+
+                </li>
+            </ul>
+        </footer>
+    </body>
+
+</html>
