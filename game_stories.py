@@ -300,7 +300,7 @@ def story_exit_scene():
 You sprint past the defeated foes obstructing your path, hurtling into the
 corridor where an intense, blinding light beckons from the far end. Without
 hesitation, you discard your weapons and dash toward the radiance. As you
-approach, you crash into am invisible barrier, a looming figure slowly comes
+approach, you crash into an invisible barrier, a looming figure slowly comes
 into view on the other side.
 
 It's a Necron Overlord, and an eerie awareness in your mind whispers his
