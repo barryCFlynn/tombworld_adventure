@@ -264,5 +264,6 @@ Go to the "Deploy" tab and click the "Deploy Branch" button.
 ### Credits
 
 - My mentor Mitko Bachvarov for his help in guiding me through this project
+- Background art was taken form the Warhammer Community site
 
 
