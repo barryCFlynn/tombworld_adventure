@@ -1,4 +1,4 @@
-# TomBworld Adventure
+# Tombworld Adventure
 
 Welcome to 'Tombworld Adventure' a text-based adventure game that plunges you into the grim and foreboding universe of Warhammer 40,000. You're a miner on a desolate planet, working diligently until a mysterious blackout transports you to the heart of a Necron tomb world. Navigate treacherous catacombs, decipher ancient hieroglyphs, and battle unspeakable horrors in your quest for survival and escape. Can you overcome the malevolent forces of the Necrons and find your way back to the world you once knew?
 
