@@ -7,7 +7,7 @@ Welcome to 'Tombworld Adventure' a text-based adventure game that plunges you in
 [View TomBworld Adventure live project here](https://tombworld-adventure-26cae5d127df.herokuapp.com/)
 
 
-![Am I Responsive](assets\images\README_am_i_responsive.png)
+![Am I Responsive](assets\images\README_Am_I_Responsive_2.png)
 
 ### Table of Contents
 
