@@ -7,7 +7,7 @@ Welcome to 'Tombworld Adventure' a text-based adventure game that plunges you in
 [View TomBworld Adventure live project here](https://tombworld-adventure-26cae5d127df.herokuapp.com/)
 
 
-![Am I Responsive](assets\images\README_Am_I_Responsive.png)
+![Am I Responsive](assets\images\README_am_i_responsive.png)
 
 ### Table of Contents
 
@@ -76,17 +76,17 @@ Welcome to 'Tombworld Adventure' a text-based adventure game that plunges you in
 #### Text-Based Immersion
 - Dive into a nostalgic text-based adventure experience that focuses on storytelling and decision-making.
 
-<img src="assets\images\README_console_screen.png" alt="Picture of Console Screen" width= 600px>
+    <img src="assets\images\README_console_screen.png" alt="Picture of Console Screen" width= 600px>
 
 #### Rich Storytelling
 - Enjoy a well-crafted narrative that keeps you engaged.
 
-<img src="assets\images\README_storytelling.png" alt="Picture of Story" width= 600px>
+    <img src="assets\images\README_storytelling.png" alt="Picture of Story" width= 600px>
 
 #### Interactive Exploration
 - Interact with the game world by making choices, uncovering secrets, and encountering various characters.
 
-<img src="assets\images\README_decision_making.png" alt="Picture of Decisions" width= 600px>
+    <img src="assets\images\README_decision_making.png" alt="Picture of Decisions" width= 600px>
 
 ---
 
