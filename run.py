@@ -78,7 +78,7 @@ def main():
                     print("Please Enter a valid command.")
         else:
             print("Please Enter a valid name with only"
-                  "alphabetical characters.")
+                  " alphabetical characters.")
 
 
 def room_intro():

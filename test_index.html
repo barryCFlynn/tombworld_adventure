@@ -30,6 +30,7 @@
                     rows: 24
                 });
                 term.open(document.getElementById('terminal'));
+                term.writeln('Running startup command: python3 run.py');
                 term.writeln('');
 
                 var ws = new WebSocket(location.protocol.replace('http', 'ws') + '//' + location.hostname + (location.port ?
@@ -54,15 +55,12 @@
                 <!-- site name -->
                 <li>Tombworld Adventure Game &copy;</li>
                 <!-- about site -->
-                <li>This website was created by Barry Flynn as project and has no commercial purpose.</li>
+                <li>This website was created by Barry Flynn as a project and has no commercial purpose.</li>
                 <!-- site creator social media links -->
                 <li>
-                    <a href="https://github.com/AlexaH88" target="_blank"
-                        aria-label="Link to Alexa Hendry's GitHub profile (opens in a new tab)"><i
+                    <a href="https://github.com/barryCFlynn/" target="_blank"
+                        aria-label="Link to Barry Flynn's GitHub profile"><i
                             class="fa-brands fa-github-alt"></i></a>
-                    <a href="https://www.linkedin.com/in/alexa-hendry/" target="_blank"
-                        aria-label="Link to Alexa Hendry's LinkedIn profile (opens in a new tab)"><i
-                            class="fa-brands fa-linkedin"></i></a>
                 </li>
             </ul>
         </footer>

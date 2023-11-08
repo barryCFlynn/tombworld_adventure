@@ -11,7 +11,6 @@ def story_main():
 Welcome to Tombworld Adventure, a gripping text-based journey set in the dark
 and mysterious Warhammer 40,000 universe. You were a miner on a barren planet,
 but a strange blackout has transported you to a Necron Tomb World.
-
 Navigate eerie catacombs, decipher ancient hieroglyphs, and confront 
 unspeakable terrors as you strive for survival and escape. Face the malevolent
 forces of the Necrons and find your path home.
