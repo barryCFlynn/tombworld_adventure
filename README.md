@@ -8,7 +8,7 @@ Welcome to 'Tombworld Adventure' a text-based adventure game that plunges you in
 
 
 ![Am I Responsive](assets\images\README_Am_I_Responsive_2.png)
-![Am I Responsive](assets\images\README_Am_I_Responsive_2.png)
+
 
 ### Table of Contents
 
